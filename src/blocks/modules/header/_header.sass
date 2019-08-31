@@ -1,0 +1,29 @@
+.header
+	display: flex
+	padding: 40px 0 0
+	color: $title
+	font-family: $Russo
+	font-size: 14px
+	font-weight: 400
+	letter-spacing: 0.35px
+	&__logo
+		width: 20%
+	&__phone
+		width: 40%
+		a
+			color: $title
+			text-decoration: none
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				width: 0px
+				height: 3px
+				top: 50%
+				right: -15px
+				transform: translateY(-50%)
+				background: $yellow
+				transition: 0.4s
+			&:hover
+				&:before
+					width: 10px

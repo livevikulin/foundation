@@ -1,0 +1,135 @@
+main
+	padding: 90px 0 0
+.nav
+	position: fixed
+	ul
+		list-style: none
+		padding: 0
+		li
+			margin-bottom: 12px
+			&:last-child
+				margin-bottom: 0
+			a
+				color: $gray
+				font-family: $UM
+				font-size: 10px
+				font-weight: 500
+				letter-spacing: 0.25px
+				padding: 6px 20px 6px 0
+				text-decoration: none
+				transition: 0.2s
+				&:hover
+					background: $yellow
+					color: $title
+	&-active
+		a
+			background: $red
+			color: $white !important
+			&:hover
+				background: $red !important
+.content
+	width: 80%
+	margin: 0 0 0 auto
+.btn
+	display: inline-block
+	text-align: center
+	color: $black
+	background: $btn
+	font-family: $UB
+	font-size: 12px
+	font-weight: 700
+	letter-spacing: 0.24px
+	padding: 20px 100px
+	text-decoration: none
+	transition: 0.2s
+	&:hover
+		background: #f9b458
+.hero
+	display: flex
+	padding-bottom: 160px
+	&__info
+		width: 50%
+		h1
+			width: 400px
+			color: $title
+			font-family: $Russo
+			font-size: 30px
+			font-weight: 400
+			letter-spacing: 0.6px
+			margin-bottom: 40px
+	&__subtitle
+		display: block
+		width: 315px
+		color: $text
+		font-family: $UR
+		font-size: 14px
+		font-weight: 400
+		letter-spacing: 0.35px
+		line-height: 20px
+		margin-bottom: 25px
+	&__image
+		width: 50%
+		img
+			width: 100%
+			object-fit: cover
+
+.type
+	padding-bottom: 85px
+	&__title
+		display: block
+		width: 390px
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__boxes
+		display: flex
+		flex-wrap: wrap
+	&-box
+		margin-right: 155px
+		margin-bottom: 65px
+		&:nth-child(3n+3)
+			margin-right: 0
+		&__image
+			width: 315px
+			height: 224px
+			margin-bottom: 28px
+			img
+				width: 100%
+				object-fit: contain
+		&__title
+			display: block
+			width: 215px
+			color: $title
+			font-family: $Russo
+			font-size: 18px
+			font-weight: 400
+			letter-spacing: 0.45px
+			margin-bottom: 15px
+		&__caption
+			display: block
+			color: $title
+			font-family: $UB
+			font-size: 14px
+			font-weight: 700
+			letter-spacing: 0.35px
+			margin-bottom: 4px
+		&__subtitle
+			display: block
+			width: 225px
+			color: $text
+			font-family: $UR
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px
+			line-height: 20px
+			margin-bottom: 15px
+		&__price
+			display: block
+			color: $red
+			font-family: $Russo
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px

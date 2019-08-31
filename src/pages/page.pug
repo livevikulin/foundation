@@ -1,0 +1,85 @@
+extends ../views/layouts/default
+block variables
+	- var title = "Фундаменты";
+
+block content
+	main
+		.container
+			.nav
+				ul
+					li.nav-active
+						a(href="#hero") ЗАКАЗАТЬ РАСЧЁТ
+					li
+						a(href="#type") ВИДЫ ФУНДАМЕНТОВ
+					li
+						a(href="#calculator") КАЛЬКУЛЯТОР
+					li
+						a(href="#selection") ПОДБОР ФУНДАМЕНТА
+					li
+						a(href="#examples") ПРИМЕРЫ РАБОТЫ
+					li
+						a(href="#about") О НАС
+					li
+						a(href="#technics") НАША ТЕХНИКА
+					li
+						a(href="#specialists") НАШИ СПЕЦИАЛИСТЫ
+					li
+						a(href="#reviews") ОТЗЫВЫ
+					li
+						a(href="#contacts") КОНТАКТЫ
+			.content
+				.hero
+					._info
+						h1 Строим фундаменты под малоэтажные дома в Иркутской области
+						span._subtitle Закажите бесплатный расчёт стоимости вашего фундамента
+						a.btn(href="#") ЗАКАЗАТЬ РАСЧЁТ
+					._image
+						img(src="img/hero-img.jpg", alt="")
+				.type#type
+					span._title Типы фундамента, которые мы строим
+					._boxes
+						.type-box
+							._image
+								img(src="img/type1.jpg", alt="")
+							span._title Свайно-забивной фундамент
+							span._caption  Назначение
+							span._subtitle Быстровозводимый и экономичный вид фундамент.
+							span._caption Сроки строительства:
+							span._subtitle 8-20 дней, в зависимости от объема работ
+							span._price от 4500 руб/за сваю
+						.type-box
+							._image
+								img(src="img/type2.jpg", alt="")
+							span._title Свайно-винтовой
+							span._caption  Назначение
+							span._subtitle Быстровозводимый и экономичный вид фундамент.
+							span._caption Сроки строительства:
+							span._subtitle 8-20 дней, в зависимости от объема работ
+							span._price от 12500 руб/м²
+						.type-box
+							._image
+								img(src="img/type3.jpg", alt="")
+							span._title Монолитная плита
+							span._caption  Назначение
+							span._subtitle Для слабых грунтов и тяжёлых построек
+							span._caption Сроки строительства:
+							span._subtitle 8-20 дней, в зависимости от объема работ
+							span._price от 12500 руб/м²
+						.type-box
+							._image
+								img(src="img/type4.jpg", alt="")
+							span._title Ростверковый
+							span._caption  Назначение
+							span._subtitle Для местности со сложным рельефом и ненадежным грунтом
+							span._caption Сроки строительства:
+							span._subtitle 8-20 дней, в зависимости от объема работ
+							span._price от 3990 руб/пог. м
+						.type-box
+							._image
+								img(src="img/type5.jpg", alt="")
+							span._title Ленточный фундамент со сваями
+							span._caption  Назначение
+							span._subtitle Традиционный вид фундамента для тяжелых и средних домов
+							span._caption Сроки строительства:
+							span._subtitle 8-20 дней, в зависимости от объема работ
+							span._price от 12700 руб/м³
