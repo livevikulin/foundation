@@ -1,4 +1,5 @@
 import "jquery";
+import { range } from "rxjs/observable/range";
 
 $(document).ready(function() {
 
@@ -31,5 +32,22 @@ $(document).ready(function() {
 			}
 		});
 	};
+
+	//Range slider
+	let rangeSlider = document.querySelector(".rs-range");
+	let rangeBullet = document.querySelector(".rs-label");
+
+	rangeSlider.addEventListener("input", showSliderValue, false);
+
+	for (let i = 0; i < rangeSlider.length; i++) {
+		rangeSlider[i].input = showSliderValue();
+	};
+
+	function showSliderValue() {
+		rangeBullet.innerHTML = rangeSlider.value;
+		var bulletPosition = (rangeSlider.value / rangeSlider.max);
+		rangeBullet.style.left = (bulletPosition * 428) + "px";
+	};
+	
 
 })

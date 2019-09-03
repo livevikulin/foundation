@@ -83,3 +83,23 @@ block content
 							span._caption Сроки строительства:
 							span._subtitle 8-20 дней, в зависимости от объема работ
 							span._price от 12700 руб/м³
+				.calculator#calculator
+					span._title Рассчитайте примерную стоимость фундамента на он-лайн калькуляторе
+					span._subtitle Укажите данные объекта
+					.choice
+						span._title Уклон рельефа (%)
+						.range-slider
+							span.rs-label 0
+							input.rs-range(type="range" value="0" min="0" max="100")
+						.checkbox
+							input(type="checkbox" id="dont_know")
+							label(for="dont_know") Не знаю
+					.choice
+						span._title Уклон рельефа (%)
+						.range-slider
+							span.rs-label 0
+							input.rs-range(type="range" value="0" min="0" max="100")
+						.checkbox
+							input(type="checkbox" id="dont_know2")
+							label(for="dont_know2") Не знаю
+

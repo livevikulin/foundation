@@ -2,6 +2,7 @@ main
 	padding: 90px 0 0
 .nav
 	position: fixed
+	z-index: 1
 	ul
 		list-style: none
 		padding: 0
@@ -133,3 +134,141 @@ main
 			font-size: 14px
 			font-weight: 400
 			letter-spacing: 0.35px
+.calculator
+	padding: 120px 0 115px
+	position: relative
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: -497px
+		width: 100vw
+		height: 100%
+		background: #eaebef
+		z-index: -1
+	&__title
+		display: block
+		max-width: 469px
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__subtitle
+		display: block
+		color: #2b2c28
+		font-family: $Russo
+		font-size: 18px
+		font-weight: 400
+		letter-spacing: 0.45px
+		margin-bottom: 30px
+
+.choice
+	display: inline-block
+	width: 49%
+	&__title
+		display: block
+		color: #2b2c28
+		font-family: $Russo
+		font-size: 14px
+		font-weight: 400
+		letter-spacing: 0.35px
+		margin-bottom: 10px
+.checkbox
+	margin-top: 20px
+	input
+		display: none
+		&:checked + label:after
+			display: block
+	label
+		display: inline-block
+		color: $title
+		font-family: $UB
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 0.35px
+		padding-left: 30px
+		cursor: pointer
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			width: 20px
+			height: 20px
+			border: 2px solid #656565
+			background-color: #f7f7f7
+			box-sizing: border-box
+			border-radius: 50%
+		&:after
+			display: none
+			position: absolute
+			content: ''
+			top: 50%
+			left: 5px
+			transform: translateY(-50%)
+			width: 10px
+			height: 10px
+			background-color: #f9b458
+			border-radius: 50%
+
+.range-slider 
+	width: 450px
+.rs-range 
+	width: 100%
+	-webkit-appearance: none
+	&:focus 
+		outline: none
+
+	&::-webkit-slider-runnable-track 
+		height: 3px
+		cursor: pointer
+		box-shadow: none
+		background: $title
+
+	&::-moz-range-track 
+		width: 450px
+		height: 3px
+		cursor: pointer
+		box-shadow: none
+		background: $title
+
+	&::-webkit-slider-thumb 
+		width: 21px
+		height: 20px
+		border: 2px solid #2b2c28
+		background-color: #f9b458
+		border-radius: 50%
+		-webkit-appearance: none
+		margin-top: -9px
+
+	&::-moz-range-thumb
+		width: 21px
+		height: 20px
+		border: 2px solid #2b2c28
+		background-color: #f9b458
+		border-radius: 50%
+		-webkit-appearance: none
+		margin-top: -9px
+
+	&::-moz-focus-outer 
+		border: 0
+
+.rs-label 
+	position: relative
+	transform-origin: center center
+	display: block
+	width: 20px
+	height: 20px
+	color: $title
+	font-family: $UB
+	font-size: 14px
+	font-weight: 700
+	letter-spacing: 0.35px
+	background: transparent
+	text-align: center
+	box-sizing: border-box
+	left: attr(value)
