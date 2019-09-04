@@ -34,20 +34,16 @@ $(document).ready(function() {
 	};
 
 	//Range slider
-	let rangeSlider = document.querySelector(".rs-range");
-	let rangeBullet = document.querySelector(".rs-label");
-
-	rangeSlider.addEventListener("input", showSliderValue, false);
-
-	for (let i = 0; i < rangeSlider.length; i++) {
-		rangeSlider[i].input = showSliderValue();
+	$('.rs-range').on("input", showSliderValue);
+	
+	function showSliderValue(e) {
+		const $el = $(e.target);
+		const $label = $el.closest('.js-choice').find('.js-label');
+		$label.text($el.val());
+		const bulletPosition = ($el.val() / $el.attr('max'));
+		$label.css('left', (bulletPosition * 428) + "px");
 	};
-
-	function showSliderValue() {
-		rangeBullet.innerHTML = rangeSlider.value;
-		var bulletPosition = (rangeSlider.value / rangeSlider.max);
-		rangeBullet.style.left = (bulletPosition * 428) + "px";
-	};
+	
 	
 
 })
