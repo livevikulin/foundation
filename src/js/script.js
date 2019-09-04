@@ -40,7 +40,7 @@ $(document).ready(function() {
 	rangeSlider.addEventListener("input", showSliderValue, false);
 
 	for (let i = 0; i < rangeSlider.length; i++) {
-		rangeSlider[i].input = showSliderValue();
+		rangeSlider[i].addEventListener("input") = showSliderValue();
 	};
 
 	function showSliderValue() {
