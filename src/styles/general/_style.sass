@@ -1,3 +1,5 @@
+body
+	overflow-x: hidden
 main
 	padding: 90px 0 0
 .nav
@@ -19,13 +21,27 @@ main
 				padding: 6px 20px 6px 0
 				text-decoration: none
 				transition: 0.2s
-				&:hover
+				position: relative
+				span
+					position: relative
+				&:before
+					position: absolute
+					content: ''
+					top: 0
+					width: 0
+					height: 100%
 					background: $yellow
+					transition: 0.2s
+				&:hover
 					color: $title
+					&:before
+						width: 100%
 	&-active
 		a
 			background: $red
 			color: $white !important
+			&:before
+				display: none
 			&:hover
 				background: $red !important
 .content
@@ -43,8 +59,22 @@ main
 	padding: 20px 100px
 	text-decoration: none
 	transition: 0.2s
+	position: relative
+	span
+		position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 100%
+		background: rgb(249, 180, 88)
+		transition: all 0.4s ease
 	&:hover
-		background: #f9b458
+		// background: #f9b458
+		&:before
+			width: 100%
 .hero
 	display: flex
 	padding-bottom: 160px
@@ -163,10 +193,15 @@ main
 		font-weight: 400
 		letter-spacing: 0.45px
 		margin-bottom: 30px
+	&__block
+		margin-bottom: 25px
 
 .choice
 	display: inline-block
 	width: 49%
+	margin-bottom: 30px
+	&:nth-child(1n+3)
+		margin-bottom: 0
 	&__title
 		display: block
 		color: #2b2c28
@@ -272,3 +307,504 @@ main
 	text-align: center
 	box-sizing: border-box
 	left: attr(value)
+
+.selection
+	padding: 150px 0 140px
+	&__title
+		display: block
+		max-width: 460px
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__subtitle
+		display: block
+		max-width: 685px
+		color: $text
+		font-family: $UR
+		font-size: 20px
+		font-weight: 400
+		letter-spacing: 0.5px
+		line-height: 30px
+		margin-bottom: 60px
+	&__block
+		p
+			margin: 0 0 60px
+			&:last-child
+				margin-bottom: 0
+			span
+				display: inline-block
+				width: 50%
+				vertical-align: top
+				&:first-child
+					color: $title
+					font-family: $Russo
+					font-size: 18px
+					font-weight: 400
+					letter-spacing: 0.45px
+				&:last-child
+					color: $text
+					font-family: $UR
+					font-size: 14px
+					font-weight: 400
+					letter-spacing: 0.35px
+					line-height: 20px
+.form
+	padding: 30px 0 40px 30px
+	background: url('../img/form2-bg.png') no-repeat $title
+	background-position-x: 100%
+	&__title
+		display: block
+		max-width: 460px
+		color: #f7f7f7
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 37px
+	&__block
+		input
+			display: inline-block
+			width: 171px
+			color: #f7f7f7
+			font-family: $UB
+			font-size: 14px
+			font-weight: 700
+			letter-spacing: 0.35px
+			border: none
+			border-bottom: 1px solid #f7f7f7
+			background: transparent
+			outline: none
+			padding: 18px 22px
+			box-sizing: border-box
+			&::placeholder
+				color: #f7f7f7
+				font-family: $UB
+				font-size: 14px
+				font-weight: 700
+				letter-spacing: 0.35px
+		.btn
+			padding: 20px 60px
+			margin-left: 30px
+.confirm
+	margin-top: 20px
+	input
+		display: none
+		&:checked + label
+			&:after
+				opacity: 1
+	label
+		display: inline-block
+		color: #f7f7f7
+		font-family: $UR
+		font-size: 14px
+		font-weight: 400
+		letter-spacing: 0.35px
+		line-height: 20px
+		padding-left: 30px
+		cursor: pointer
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			width: 20px
+			height: 20px
+			border: 2px solid #f7f7f7
+			box-sizing: border-box
+		&:after
+			position: absolute
+			content: url('../img/check.png')
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 20px
+			height: 20px
+			left: 0
+			top: 0
+			opacity: 0
+		a
+			color: #f7f7f7
+			text-decoration: none
+			border-bottom: 1px solid #f7f7f7
+			transition: 0.2s
+			&:hover
+				border-bottom: none
+
+.examples
+	padding-top: 150px
+	padding-bottom: 145px
+	&__title
+		display: block
+		max-width: 460px
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__main
+		display: flex
+		justify-content: space-between
+.none-slider
+	display: none
+.tabs
+	&-nav
+		list-style: none
+		padding: 0
+		li
+			margin-bottom: 12px
+			&:last-child
+				margin-bottom: 0
+			a
+				color: $gray
+				font-family: $UM
+				font-size: 10px
+				font-weight: 500
+				letter-spacing: 0.25px
+				padding: 6px 20px 6px 0
+				text-decoration: none
+				transition: 0.2s
+				position: relative
+				span
+					position: relative
+				&:before
+					position: absolute
+					content: ''
+					top: 0
+					width: 0
+					height: 100%
+					background: $yellow
+					transition: 0.2s
+				&:hover
+					color: $title
+					&:before
+						width: 100%
+	&-box
+		width: 100%
+		max-width: 939px
+	&-slider
+		.slick-arrow
+			z-index: 99
+			transition: 0.2s
+			&:hover
+				background: $btn
+		.slick-prev
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background: $white
+			left: 30px
+			&:before
+				content: url('../img/arrow-left.png')
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+		.slick-next
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background: $white
+			right: 30px
+			&:before
+				content: url('../img/arrow-right.png')
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	&-slide
+		img
+			width: 100%
+			object-fit: cover
+	&-info
+		display: flex
+		padding-top: 25px
+		ul
+			width: 33%
+			list-style: none
+			padding: 0
+			li
+				margin-bottom: 10px
+				span
+					display: block
+					&:first-child
+						color: $title
+						font-family: $UB
+						font-size: 14px
+						font-weight: 700
+						letter-spacing: 0.35px
+						margin-bottom: 4px
+					&:last-child
+						color: $text
+						font-family: $UR
+						font-size: 14px
+						font-weight: 400
+						letter-spacing: 0.35px
+						line-height: 20px
+
+.tab-active
+	a
+		background: $red
+		color: $white !important
+		&:before
+			display: none
+		&:hover
+			background: $red !important
+
+.about
+	padding-bottom: 196px
+	&__title
+		display: block
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__subtitle
+		display: block
+		max-width: 690px
+		color: $text
+		font-family: $UR
+		font-size: 20px
+		font-weight: 400
+		letter-spacing: 0.5px
+		line-height: 30px
+		margin-bottom: 75px
+	&__block
+		display: flex
+	&__box
+		width: 25%
+		height: 210px
+		position: relative
+		&-reverse
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+	&-box
+		&__title
+			display: block
+			color: $red
+			font-family: $Russo
+			font-size: 25px
+			font-weight: 400
+			letter-spacing: 0.5px
+			margin-bottom: 10px
+		&__subtitle
+			display: block
+			color: $red
+			font-family: $Russo
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px
+		&__text
+			position: absolute
+			display: block
+			max-width: 182px
+			bottom: -45px
+			color: $text
+			font-family: $UR
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px
+			line-height: 20px
+	
+.technics
+	padding-bottom: 90px
+	&__title
+		display: block
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__subtitle
+		display: block
+		color: $title
+		font-family: $Russo
+		font-size: 18px
+		font-weight: 400
+		letter-spacing: 0.45px
+	&__image
+		width: 100%
+		max-width: 470px
+		margin-bottom: 25px
+		img
+			width: 100%
+			object-fit: cover
+	&__block
+		display: flex
+		flex-wrap: wrap
+	&__box
+		width: 50%
+		margin-bottom: 60px
+
+.specialists
+	padding-bottom: 90px
+	&__title
+		display: block
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__block
+		display: flex
+		flex-wrap: wrap
+	&__box
+		width: 314px
+		margin-right: 157px
+		margin-bottom: 60px
+		&:nth-child(3n+3)
+			margin-right: 0
+	&__name
+		display: block
+		max-width: 190px
+		color: $title
+		font-family: $Russo
+		font-size: 18px
+		font-weight: 400
+		letter-spacing: 0.45px
+		margin-bottom: 5px
+		padding-left: 2px
+	&__post
+		display: block
+		max-width: 150px
+		color: $title
+		font-family: $UR
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 0.35px
+		padding-left: 2px
+	&__button
+		height: 409px
+		color: $title
+		font-family: $Russo
+		font-size: 18px
+		font-weight: 400
+		letter-spacing: 0.45px
+		background: #eaebef
+		padding: 60px 170px 0 31px
+		box-sizing: border-box
+		cursor: pointer
+		transition: 0.2s
+		position: relative
+		&:before
+			position: absolute
+			content: url('../img/arrow-spec.png')
+			top: 50%
+			left: 31px
+			transform: translateY(-50%)
+			transition: 0.1s
+		&:hover
+			background: $btn
+		&:active
+			&:before
+				left: 50px
+	&-slide
+		width: 628px
+		&__photo
+			margin-bottom: 25px
+			img
+				width: 100%
+				object-fit: cover
+
+.reviews
+	padding-bottom: 150px
+	&__title 
+		display: block
+		color: $title
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 40px
+	&__slide
+		width: 628px !important
+		margin: 0 30px
+	&__slider
+		.slick-slide
+			opacity: 0.2
+			outline: none
+		.slick-active,
+		.slick-current,
+		.slick-center
+			opacity: 1
+.review
+	&-text
+		width: 628px
+		height: 308px
+		padding: 42px 47px 72px 101px
+		font-family: $UR
+		color: #f7f7f7
+		font-size: 16px
+		font-style: italic
+		letter-spacing: 0.4px
+		line-height: 24px
+		background: $title
+		box-sizing: border-box
+		position: relative
+		&:before
+			position: absolute
+			content: url('../img/quote.png')
+			top: 44px
+			left: 41px
+	&-person
+		text-align: center
+		position: relative
+		top: -40px
+		&__photo
+			width: 80px
+			height: 80px
+			margin: 0 auto
+			border-radius: 50%
+			border: 4px solid #f7f7f7
+			box-sizing: border-box
+			overflow: hidden
+			img
+				width: 100%
+				object-fit: contain
+		&__name
+			display: block
+			color: $title
+			font-family: $Russo
+			font-size: 18px
+			font-weight: 400
+			letter-spacing: 0.45px
+
+.contacts
+	padding: 60px 0 302px 314px
+	background: url('../img/map.jpg')
+	&__title
+		display: block
+		color: #f7f7f7
+		font-family: $Russo
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		margin-bottom: 37px
+	&-block
+		&__title
+			display: block
+			color: #f7f7f7
+			font-family: $UR
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px
+			line-height: 20px
+		&__subtitle
+			display: block
+			color: #f7f7f7
+			font-family: $Russo
+			font-size: 14px
+			font-weight: 400
+			letter-spacing: 0.35px
+			margin-bottom: 23px
+		span
+			&:last-child
+				margin-bottom: 40px
+	.btn
+		padding: 20px 70px

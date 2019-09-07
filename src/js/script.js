@@ -1,5 +1,5 @@
 import "jquery";
-import { range } from "rxjs/observable/range";
+import "slick-slider";
 
 $(document).ready(function() {
 
@@ -34,20 +34,57 @@ $(document).ready(function() {
 	};
 
 	//Range slider
-	let rangeSlider = document.querySelector(".rs-range");
-	let rangeBullet = document.querySelector(".rs-label");
-
-	rangeSlider.addEventListener("input", showSliderValue, false);
-
-	for (let i = 0; i < rangeSlider.length; i++) {
-		rangeSlider[i].addEventListener("input") = showSliderValue();
-	};
-
-	function showSliderValue() {
-		rangeBullet.innerHTML = rangeSlider.value;
-		var bulletPosition = (rangeSlider.value / rangeSlider.max);
-		rangeBullet.style.left = (bulletPosition * 428) + "px";
-	};
+	$('.rs-range').on("input", showSliderValue);
 	
+	function showSliderValue(e) {
+		const $el = $(e.target);
+		const $label = $el.closest('.js-choice').find('.js-label');
+		$label.text($el.val());
+		const bulletPosition = ($el.val() / $el.attr('max'));
+		$label.css('left', (bulletPosition * 428) + "px");
+	};
 
+	//Маска
+	$("#phone").mask("+7 (999)-999-9999", {autoclear: false});
+
+	//Табы в блоке с примерами работ
+	$('.tabs-box').hide();
+	$('.tabs-box:first').show();
+	$('.tabs-nav li:first').addClass('tab-active');
+
+	$('.tabs-nav li a').click(function(e) {
+		e.preventDefault();
+		$('.tabs-nav li').removeClass('tab-active');
+		$(this).parent().addClass('tab-active');
+		$('.tabs-box').hide();
+
+		let selectTab = $(this).attr('href');
+		$(selectTab).fadeIn();
+
+	});
+
+	//Инициализация слайдера с примерами работ
+	let slider = $('#slider_1, #slider_2, #slider_3, #slider_4, #slider_5');
+	slider.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true
+	});
+
+	//Инициализация слайдера с специалистами
+	$('.specialists-slider').slick({
+		arrows: false
+	});
+	$('.specialists__button').on('click', function() {
+		$('.specialists-slider').slick('slickNext');
+	});
+	
+	//Инициализация слайдера с отзывами
+	$('.reviews__slider').slick({
+		infinite: true,
+		autoplay: true,
+		speed: 800,
+		centerMode: true,
+		variableWidth: true
+	});
 })

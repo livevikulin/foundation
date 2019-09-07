@@ -8,31 +8,42 @@ block content
 			.nav
 				ul
 					li.nav-active
-						a(href="#hero") ЗАКАЗАТЬ РАСЧЁТ
+						a(href="#hero") 
+							span ЗАКАЗАТЬ РАСЧЁТ
 					li
-						a(href="#type") ВИДЫ ФУНДАМЕНТОВ
+						a(href="#type") 
+							span ВИДЫ ФУНДАМЕНТОВ
 					li
-						a(href="#calculator") КАЛЬКУЛЯТОР
+						a(href="#calculator") 
+							span КАЛЬКУЛЯТОР
 					li
-						a(href="#selection") ПОДБОР ФУНДАМЕНТА
+						a(href="#selection") 
+							span ПОДБОР ФУНДАМЕНТА
 					li
-						a(href="#examples") ПРИМЕРЫ РАБОТЫ
+						a(href="#examples") 
+							span ПРИМЕРЫ РАБОТЫ
 					li
-						a(href="#about") О НАС
+						a(href="#about") 
+							span О НАС
 					li
-						a(href="#technics") НАША ТЕХНИКА
+						a(href="#technics") 
+							span НАША ТЕХНИКА
 					li
-						a(href="#specialists") НАШИ СПЕЦИАЛИСТЫ
+						a(href="#specialists") 
+							span НАШИ СПЕЦИАЛИСТЫ
 					li
-						a(href="#reviews") ОТЗЫВЫ
+						a(href="#reviews") 
+							span ОТЗЫВЫ
 					li
-						a(href="#contacts") КОНТАКТЫ
+						a(href="#contacts") 
+							span КОНТАКТЫ
 			.content
 				.hero
 					._info
 						h1 Строим фундаменты под малоэтажные дома в Иркутской области
 						span._subtitle Закажите бесплатный расчёт стоимости вашего фундамента
-						a.btn(href="#") ЗАКАЗАТЬ РАСЧЁТ
+						a.btn(href="#") 
+							span ЗАКАЗАТЬ РАСЧЁТ
 					._image
 						img(src="img/hero-img.jpg", alt="")
 				.type#type
@@ -86,20 +97,421 @@ block content
 				.calculator#calculator
 					span._title Рассчитайте примерную стоимость фундамента на он-лайн калькуляторе
 					span._subtitle Укажите данные объекта
-					.choice
-						span._title Уклон рельефа (%)
-						.range-slider
-							span.rs-label 0
-							input.rs-range(type="range" value="0" min="0" max="100")
-						.checkbox
-							input(type="checkbox" id="dont_know")
-							label(for="dont_know") Не знаю
-					.choice
-						span._title Уклон рельефа (%)
-						.range-slider
-							span.rs-label 0
-							input.rs-range(type="range" value="0" min="0" max="100")
-						.checkbox
-							input(type="checkbox" id="dont_know2")
-							label(for="dont_know2") Не знаю
+					._block
+						.choice.js-choice
+							span._title Уклон рельефа (%)
+							.range-slider
+								span.rs-label.js-label 0
+								input.rs-range(type="range" value="0" min="0" max="100")
+							.checkbox
+								input(type="checkbox" id="dont_know")
+								label(for="dont_know") Не знаю
+						.choice.js-choice
+							span._title Уклон рельефа (%)
+							.range-slider
+								span.rs-label.js-label 0
+								input.rs-range(type="range" value="0" min="0" max="100")
+							.checkbox
+								input(type="checkbox" id="dont_know2")
+								label(for="dont_know2") Не знаю
+						.choice.js-choice
+							span._title Удалённость от Иркутска (км)
+							.range-slider
+								span.rs-label.js-label 0
+								input.rs-range(type="range" value="0" min="0" max="100")
+							.checkbox
+								input(type="checkbox" id="in_city")
+								label(for="in_city") Объект в Иркутске
+							.checkbox
+								input(type="checkbox" id="dont_know3")
+								label(for="dont_know3") Не знаю
+						.choice.js-choice
+							span._title Удалённость от Иркутска (км)
+							.range-slider
+								span.rs-label.js-label 0
+								input.rs-range(type="range" value="0" min="0" max="100")
+							.checkbox
+								input(type="checkbox" id="in_city2")
+								label(for="in_city2") В Иркутске
+							.checkbox
+								input(type="checkbox" id="dont_know4")
+								label(for="dont_know4") Не знаю
+					a.btn(href="#") 
+						span ГОТОВО
+				.selection#selection
+					span._title Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?
+					span._subtitle Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.
+					._block
+						p
+							span Подберём оптимальный тип фундамента
+							span В большинстве случаев стоимость фундамента можно снизить за счёт правильного анализа проекта. В зависимости от грунта и строения, можно рассчитать достаточные характеристики для несущей конструкции, что поможет сэкономить ваш бюджет за счёт количества материала. Сэкономленная сумма может измеряться в десятках тысяч рублей
+						p
+							span Предложим вариант строения на ваш фундамент
+							span У вас уже есть проект фундамента, но пока нет окончательного решения какой дом строить? Мы поможем определиться с конструкцией дома и материалами для строительства. А так же внесём изменения в проект фундамента, если он окажется неподходящим для строения. Эти мероприятия помогут сэкономить ваш бюджет и создать прочную конструкцию.
+						p
+							span Изучим рельеф на вашем участке
+							span Наши геодезисты проведут анализ рельефа местности. Это важнейший этап перед началом основных работ. От него зависит количество материала для строительства и будущее всей конструкции. 
+						p
+							span Рассчитаем состав фундамента
+							span В некоторых случаях прочности конструкции можно достичь за счёт состава фундамента, а не его количества бетона. Наши специалисты знают какой состав бетона применить в различных ситуациях. Это так же может снизить стоимость конечного результата.
+						p
+							span Дополнительно можно провести геологическую разведку
+							span На участке с малоизученным грунтом мы дополнительно можем провести глубокую геологическую разведку, что даст максимальные сведения о свойствах участка под строительство.
+				.form
+					span._title Закажите выезд специалиста на ваш объект для оценки проекта 
+					form(action="#")._block
+						input(type="text" placeholder="+7" id="phone")
+						a.btn(href="#") 
+							span ЗАКАЗАТЬ ВЫЕЗД
+						.confirm
+							input(type="checkbox" id="check_confirm")
+							label(for="check_confirm") Я подтверждаю 
+								a(href="#") условия обработки персональных данных
+				.examples#examples
+					span._title Примеры работ, которые мы можем реализовать для вас
+					._main
+						ul.tabs-nav
+							li
+								a(href="#tab1")
+									span СВАЙНЫЙ
+							li
+								a(href="#tab2")
+									span РОСТВЕРКОВЫЙ
+							li
+								a(href="#tab3")
+									span ЛЕНТОЧНЫЙ
+							li
+								a(href="#tab4")
+									span СВАЙНЫЙ
+							li
+								a(href="#tab5")
+									span МОНОЛИТНАЯ ПЛИТА
+						.tabs-block
+							.tabs-box#tab1
+								.tabs-slider#slider_1
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+								.tabs-info
+									ul
+										li
+											span Стены
+											span Пено-блок 
+										li
+											span Цена
+											span 385 000 рублей
+										li
+											span Размер
+											span 10\10 м
+										li
+											span Размер
+											span 10\10 м
+									ul
+										li
+											span ЖБИ свай
+											span 38 шт. 
+										li
+											span Ростверк
+											span 400*500 мм
+										li
+											span Время работ
+											span 15 рабочих дней 
+										li
+											span Время работ
+											span 15 рабочих дней 
+									ul
+										li
+											span Описание:
+											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
+							.tabs-box#tab2
+								.tabs-slider#slider_2
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+								.tabs-info
+									ul
+										li
+											span Стены
+											span Пено-блок 
+										li
+											span Цена
+											span 385 000 рублей
+										li
+											span Размер
+											span 10\10 м
+										li
+											span Размер
+											span 10\10 м
+									ul
+										li
+											span ЖБИ свай
+											span 38 шт. 
+										li
+											span Ростверк
+											span 400*500 мм
+										li
+											span Время работ
+											span 15 рабочих дней 
+										li
+											span Время работ
+											span 15 рабочих дней 
+									ul
+										li
+											span Описание:
+											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
+							.tabs-box#tab3
+								.tabs-slider#slider_3
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+								.tabs-info
+									ul
+										li
+											span Стены
+											span Пено-блок 
+										li
+											span Цена
+											span 385 000 рублей
+										li
+											span Размер
+											span 10\10 м
+										li
+											span Размер
+											span 10\10 м
+									ul
+										li
+											span ЖБИ свай
+											span 38 шт. 
+										li
+											span Ростверк
+											span 400*500 мм
+										li
+											span Время работ
+											span 15 рабочих дней 
+										li
+											span Время работ
+											span 15 рабочих дней 
+									ul
+										li
+											span Описание:
+											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
+							.tabs-box#tab4
+								.tabs-slider#slider_4
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+								.tabs-info
+									ul
+										li
+											span Стены
+											span Пено-блок 
+										li
+											span Цена
+											span 385 000 рублей
+										li
+											span Размер
+											span 10\10 м
+										li
+											span Размер
+											span 10\10 м
+									ul
+										li
+											span ЖБИ свай
+											span 38 шт. 
+										li
+											span Ростверк
+											span 400*500 мм
+										li
+											span Время работ
+											span 15 рабочих дней 
+										li
+											span Время работ
+											span 15 рабочих дней 
+									ul
+										li
+											span Описание:
+											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
+							.tabs-box#tab5
+								.tabs-slider#slider_5
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+									.tabs-slide
+										img(src="img/slide1.jpg", alt="")
+								.tabs-info
+									ul
+										li
+											span Стены
+											span Пено-блок 
+										li
+											span Цена
+											span 385 000 рублей
+										li
+											span Размер
+											span 10\10 м
+										li
+											span Размер
+											span 10\10 м
+									ul
+										li
+											span ЖБИ свай
+											span 38 шт. 
+										li
+											span Ростверк
+											span 400*500 мм
+										li
+											span Время работ
+											span 15 рабочих дней 
+										li
+											span Время работ
+											span 15 рабочих дней 
+									ul
+										li
+											span Описание:
+											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
+				.about#about
+					span._title О нас
+					span._subtitle Азбука фундамента – строительная компания, занимающаяся созданием различных типов фундамента. Мы помогаем людям строить надёжные и недорогие фундаменты, а так же избежать ошибок в этом процессе. Такие результаты достигаются благодаря нашим ответственным специалистам и наличию собственной специальной техники.
+					._block
+						._box
+							span.about-box__title 166
+							span.about-box__subtitle Проектов за 2018 год
+						._box.about__box-reverse
+							span.about-box__title до 15 лет*
+							span.about-box__subtitle Гарантия <br> на фундамент
+							span.about-box__text *При проведении геологической разведки
+						._box
+							span.about-box__title от 1 дня
+							span.about-box__subtitle Сроки строительства
+						._box.about__box-reverse
+							span.about-box__title 15%
+							span.about-box__subtitle Скидка на <br> предварительный <br> заказ
+				.technics#technics
+					span._title Мы имеем свой парк спецтехники
+					._block
+						._box
+							._image
+								img(src="img/car1.jpg", alt="")
+							span._subtitle Кран-борт эвакуатор ISUZU
+						._box
+							._image
+								img(src="img/car2.jpg", alt="")
+							span._subtitle Сваебойная установка <br> «Байкал-ДМ-240»
+						._box
+							._image
+								img(src="img/car3.jpg", alt="")
+							span._subtitle Ямобур CANTER
+						._box
+							._image
+								img(src="img/car4.jpg", alt="")
+							span._subtitle Трактор
+				.specialists#specialists
+					span._title Наши специалисты
+					._block
+						._box.specialists-slider
+							.specialists-slide
+								._photo
+									img(src="img/spec1.jpg", alt="")
+								span.specialists__name Александр Непомнящий
+								span.specialists__post Директор
+							.specialists-slide
+								._photo
+									img(src="img/spec1.jpg", alt="")
+								span.specialists__name Александр Непомнящий
+								span.specialists__post Директор
+						._box.specialists-slider
+							.specialists-slide
+								._photo
+									img(src="img/spec2.jpg", alt="")
+								span.specialists__name Николай Ганин
+								span.specialists__post Монтажник
+							.specialists-slide
+								._photo
+									img(src="img/spec2.jpg", alt="")
+								span.specialists__name Николай Ганин
+								span.specialists__post Монтажник
+						._box.specialists-slider
+							.specialists-slide
+								._photo
+									img(src="img/spec3.jpg", alt="")
+								span.specialists__name Александр Музыка
+								span.specialists__post Геодезист
+							.specialists-slide
+								._photo
+									img(src="img/spec3.jpg", alt="")
+								span.specialists__name Александр Музыка
+								span.specialists__post Геодезист
+						._box.specialists-slider
+							.specialists-slide
+								._photo
+									img(src="img/spec4.jpg", alt="")
+								span.specialists__name Анна Бакирова
+								span.specialists__post Контролер качества фундамента
+							.specialists-slide
+								._photo
+									img(src="img/spec4.jpg", alt="")
+								span.specialists__name Анна Бакирова
+								span.specialists__post Контролер качества фундамента
+						._box.specialists-slider
+							.specialists-slide
+								._photo
+									img(src="img/spec5.jpg", alt="")
+								span.specialists__name Александр Попов
+								span.specialists__post Инженер
+							.specialists-slide
+								._photo
+									img(src="img/spec5.jpg", alt="")
+								span.specialists__name Александр Попов
+								span.specialists__post Инженер
+						._box.specialists__button
+							span Другие сотрудники
+				.reviews#reviews
+					span._title Отзывы наших заказчиков
+					._slider
+						._slide
+							.review-text
+								span Устанавливали нам на 9 просеке винтовые сваи. Очень приемлемые цены, с менеджером Андреем всегда можно договориться , все сделали в срок и за цену, которая значительно ниже конкурентов. Всем рекомендую
+							.review-person
+								._photo
+									img(src="img/photo.jpg", alt="")
+								span._name Константин Константинопольский
+						._slide
+							.review-text
+								span Устанавливали нам на 9 просеке винтовые сваи. Очень приемлемые цены, с менеджером Андреем всегда можно договориться , все сделали в срок и за цену, которая значительно ниже конкурентов. Всем рекомендую
+							.review-person
+								._photo
+									img(src="img/photo.jpg", alt="")
+								span._name Константин Константинопольский
+						._slide
+							.review-text
+								span Устанавливали нам на 9 просеке винтовые сваи. Очень приемлемые цены, с менеджером Андреем всегда можно договориться , все сделали в срок и за цену, которая значительно ниже конкурентов. Всем рекомендую
+							.review-person
+								._photo
+									img(src="img/photo.jpg", alt="")
+								span._name Константин Константинопольский
+				.contacts#contacts
+					span._title Контакты
+					.contacts-block
+						span._title Адрес:
+						span._subtitle ул. Черского 1Б.
+						span._title Телефон:
+						span._subtitle +7 (3952) 90-48-90
+						span._title Эл. почта:
+						span._subtitle afundament@ya.ru
+					a.btn(href="#")
+						span ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ
+
 
