@@ -1,0 +1,41 @@
+.footer
+	padding: 80px 0 60px
+	&-block
+		&__social
+			margin-bottom: 60px
+			a
+				color: $title
+				font-family: $Russo
+				font-size: 14px
+				font-weight: 400
+				letter-spacing: 0.35px
+				margin-right: 235px
+				padding: 4px 20px 4px 0
+				text-decoration: none
+				position: relative
+				&:before
+					position: absolute
+					content: ''
+					width: 0%
+					height: 100%
+					top: 0
+					left: 0
+					background: $btn
+					z-index: -1
+					transition: 0.2s
+				&:hover
+					&:before
+						width: 100%
+		&__agreement
+			a
+				color: $text
+				font-family: $UR
+				font-size: 14px
+				font-weight: 400
+				letter-spacing: 0.35px
+				line-height: 20px
+				text-decoration: none
+				transition: 0.2s
+				border-bottom: 1px solid transparent
+				&:hover
+					border-bottom: 1px solid $text

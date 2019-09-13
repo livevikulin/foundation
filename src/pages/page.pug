@@ -120,10 +120,10 @@ block content
 								span.rs-label.js-label 0
 								input.rs-range(type="range" value="0" min="0" max="100")
 							.checkbox
-								input(type="checkbox" id="in_city")
+								input(type="radio" name='city' id="in_city" checked)
 								label(for="in_city") Объект в Иркутске
 							.checkbox
-								input(type="checkbox" id="dont_know3")
+								input(type="radio" name='city' id="dont_know3")
 								label(for="dont_know3") Не знаю
 						.choice.js-choice
 							span._title Удалённость от Иркутска (км)
@@ -131,10 +131,10 @@ block content
 								span.rs-label.js-label 0
 								input.rs-range(type="range" value="0" min="0" max="100")
 							.checkbox
-								input(type="checkbox" id="in_city2")
+								input(type="radio" name='city1' id="in_city2" checked)
 								label(for="in_city2") В Иркутске
 							.checkbox
-								input(type="checkbox" id="dont_know4")
+								input(type="radio" name='city1' id="dont_know4")
 								label(for="dont_know4") Не знаю
 					a.btn(href="#") 
 						span ГОТОВО
@@ -421,7 +421,7 @@ block content
 				.specialists#specialists
 					span._title Наши специалисты
 					._block
-						._box.specialists-slider
+						._box.specialists-slider#specialists1
 							.specialists-slide
 								._photo
 									img(src="img/spec1.jpg", alt="")
@@ -432,7 +432,7 @@ block content
 									img(src="img/spec1.jpg", alt="")
 								span.specialists__name Александр Непомнящий
 								span.specialists__post Директор
-						._box.specialists-slider
+						._box.specialists-slider#specialists2
 							.specialists-slide
 								._photo
 									img(src="img/spec2.jpg", alt="")
@@ -443,7 +443,7 @@ block content
 									img(src="img/spec2.jpg", alt="")
 								span.specialists__name Николай Ганин
 								span.specialists__post Монтажник
-						._box.specialists-slider
+						._box.specialists-slider#specialists3
 							.specialists-slide
 								._photo
 									img(src="img/spec3.jpg", alt="")
@@ -454,7 +454,7 @@ block content
 									img(src="img/spec3.jpg", alt="")
 								span.specialists__name Александр Музыка
 								span.specialists__post Геодезист
-						._box.specialists-slider
+						._box.specialists-slider#specialists4
 							.specialists-slide
 								._photo
 									img(src="img/spec4.jpg", alt="")
@@ -465,7 +465,7 @@ block content
 									img(src="img/spec4.jpg", alt="")
 								span.specialists__name Анна Бакирова
 								span.specialists__post Контролер качества фундамента
-						._box.specialists-slider
+						._box.specialists-slider#specialists5
 							.specialists-slide
 								._photo
 									img(src="img/spec5.jpg", alt="")

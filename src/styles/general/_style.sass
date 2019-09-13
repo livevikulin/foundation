@@ -705,13 +705,15 @@ main
 			&:before
 				left: 50px
 	&-slide
-		width: 628px
 		&__photo
 			margin-bottom: 25px
 			img
 				width: 100%
 				object-fit: cover
-
+	.slick-slide
+		width: 314px !important
+	.slick-track
+		width: 1570px !important
 .reviews
 	padding-bottom: 150px
 	&__title 
@@ -808,3 +810,97 @@ main
 				margin-bottom: 40px
 	.btn
 		padding: 20px 70px
+
+@keyframes thisSlide
+	0%
+		width: 100%
+	100%
+		width: 0%
+
+@keyframes nextSlide
+	0%
+		width: 0%
+	100%
+		width: 100%
+
+.this-slide
+	animation: thisSlide 0.5s ease
+	margin: 0 auto 0 0
+
+.next-slide
+	animation: nextSlide 0.5s ease
+	margin: 0 0 0 auto
+
+//Адаптив
+@media (max-width: 1570px)
+	.type
+		&-box
+			width: 33%
+			margin-right: 0
+			&__image
+				width: 95%
+	.calculator
+		&:before
+			left: -350px
+			width: 150%
+	.range-slider
+		width: auto
+	.form
+		background-position-x: 115%
+	.tabs
+		&-block
+			width: 80%
+	.technics
+		&__image
+			width: 95%
+	.specialists
+		&__box
+			width: 33%
+			margin-right: 0
+		&-slide
+			&__photo
+				width: 90%
+		&__button
+			width: 30%
+			height: 369px
+			margin-left: 30px
+
+@media (max-width: 1140px)
+	.nav
+		display: none
+	.content
+		width: 100%
+	.hero
+		&__info
+			width: 55%
+		&__image
+			width: 45%
+	.type
+		&-box
+			&__image
+				margin-bottom: 0
+	.calculator
+		&:before
+			width: 155%
+	.form
+		background-position-x: 170%
+	.tabs
+		&-slider
+			.slick-slide
+				height: 344px
+	.specialists
+		&-slide
+			&__photo
+				width: 70%
+		&__button
+			width: 25%
+			height: 288px
+	.contacts 
+		padding-left: 100px
+		background-position-x: 35%
+
+@media (max-width: 1140px)
+	main
+		padding: 20px 0 0
+	.hero
+		padding-bottom: 100px

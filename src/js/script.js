@@ -71,12 +71,48 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
+	//Анимация для смены слайдов с примерами работ
+	slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		
+		$(this).find('.slick-list').removeClass('next-slide');
+		$(this).find('.slick-list').addClass('this-slide');
+
+	});
+
+	slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+		
+		$(this).find('.slick-list').removeClass('this-slide');
+		$(this).find('.slick-list').addClass('next-slide');
+
+	});
+		
+	$('.one-time').slick({
+		speed: 300  // скорость анимации будет зависить от времени анимирования всех ваших блоков
+	});
+
 	//Инициализация слайдера с специалистами
-	$('.specialists-slider').slick({
+	let specialists = $('#specialists1, #specialists2, #specialists3, #specialists4, #specialists5');
+
+	specialists.slick({
 		arrows: false
 	});
 	$('.specialists__button').on('click', function() {
-		$('.specialists-slider').slick('slickNext');
+		specialists.slick('slickNext');
+	});
+
+	//Анимация для смены слайдов со специалистами
+	specialists.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		
+		$(this).find('.slick-list').removeClass('next-slide');
+		$(this).find('.slick-list').addClass('this-slide');
+
+	});
+
+	specialists.on('afterChange', function(event, slick, currentSlide, nextSlide){
+		
+		$(this).find('.slick-list').removeClass('this-slide');
+		$(this).find('.slick-list').addClass('next-slide');
+
 	});
 	
 	//Инициализация слайдера с отзывами

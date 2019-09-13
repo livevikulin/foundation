@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, ul {
 
 @media (max-width: 1570px) {
 	.container {
-		width: 100%;
+		width: 95%;
 		max-width: 1140px;
 		margin: 0 auto;
 	}
@@ -26,8 +26,8 @@ h1, h2, h3, h4, h5, h6, ul {
 
 @media (max-width: 1140px) {
 	.container {
-		width: 100%;
-		max-width: 768px;
+		width: 95%;
+		max-width: 1140px;
 		margin: 0 auto;
 		padding: 0 20px;
 	}
@@ -35,9 +35,10 @@ h1, h2, h3, h4, h5, h6, ul {
 
 @media (max-width: 768px) {
 	.container {
-		width: 100%;
+		width: 95%;
 		max-width: 320px;
 		margin: 0 auto;
 		padding: 0 10px;
+		box-sizing: border-box
 	}
 }
