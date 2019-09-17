@@ -58,6 +58,7 @@
 		"jquery.maskedinput": "^1.4.1",
 		"nouislider": "^14.0.2",
 		"slick-slider": "^1.8.2",
-		"smart-grid": "^2.1.2"
+		"smart-grid": "^2.1.2",
+		"wow.js": "^1.2.2"
 	}
 }

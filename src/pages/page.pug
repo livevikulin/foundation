@@ -96,48 +96,131 @@ block content
 							span._price от 12700 руб/м³
 				.calculator#calculator
 					span._title Рассчитайте примерную стоимость фундамента на он-лайн калькуляторе
-					span._subtitle Укажите данные объекта
-					._block
-						.choice.js-choice
-							span._title Уклон рельефа (%)
-							.range-slider
-								span.rs-label.js-label 0
-								input.rs-range(type="range" value="0" min="0" max="100")
-							.checkbox
-								input(type="checkbox" id="dont_know")
-								label(for="dont_know") Не знаю
-						.choice.js-choice
-							span._title Уклон рельефа (%)
-							.range-slider
-								span.rs-label.js-label 0
-								input.rs-range(type="range" value="0" min="0" max="100")
-							.checkbox
-								input(type="checkbox" id="dont_know2")
-								label(for="dont_know2") Не знаю
-						.choice.js-choice
-							span._title Удалённость от Иркутска (км)
-							.range-slider
-								span.rs-label.js-label 0
-								input.rs-range(type="range" value="0" min="0" max="100")
-							.checkbox
-								input(type="radio" name='city' id="in_city" checked)
-								label(for="in_city") Объект в Иркутске
-							.checkbox
-								input(type="radio" name='city' id="dont_know3")
-								label(for="dont_know3") Не знаю
-						.choice.js-choice
-							span._title Удалённость от Иркутска (км)
-							.range-slider
-								span.rs-label.js-label 0
-								input.rs-range(type="range" value="0" min="0" max="100")
-							.checkbox
-								input(type="radio" name='city1' id="in_city2" checked)
-								label(for="in_city2") В Иркутске
-							.checkbox
-								input(type="radio" name='city1' id="dont_know4")
-								label(for="dont_know4") Не знаю
-					a.btn(href="#") 
-						span ГОТОВО
+					._main
+						span._subtitle Какой тип фундамента ва нужен?
+						form._form(action="#")
+							._block
+								.checkbox
+									input(type="radio" name='foundation' id="foundation1" data-calc="calc" value="111" checked)
+									label(for="foundation1") Ленточный
+								.checkbox
+									input(type="radio" name='foundation' id="foundation2" data-calc="calc" value="222")
+									label(for="foundation2") Свайно-забивной
+								.checkbox
+									input(type="radio" name='foundation' id="foundation3" data-calc="calc" value="333")
+									label(for="foundation3") Свайно-винтовой
+								.checkbox
+									input(type="radio" name='foundation' id="foundation4" data-calc="calc" value="444")
+									label(for="foundation4") Монолитная плита
+								.checkbox
+									input(type="radio" name='foundation' id="foundation5" data-calc="calc" value="555")
+									label(for="foundation5") Растверковый
+								.checkbox
+									input(type="radio" name='foundation' id="foundation6" data-calc="calc" value="666")
+									label(for="foundation6") Не знаю
+								a.btn.btn-form(href="#") 
+									span Далее
+							._box.non-active(data-box="1")
+								._slide
+									span._subtitle Материал стен
+									.checkbox
+										input(type="radio" name='material' id="material1")
+										label(for="material1") Бревно / Брус
+									.checkbox
+										input(type="radio" name='material' id="material2")
+										label(for="material2") Пенобетон / Газобетон
+									.checkbox
+										input(type="radio" name='material' id="material3")
+										label(for="material3") Кирпич
+									.checkbox
+										input(type="radio" name='material' id="material4")
+										label(for="material4") Каркас / СИП-панели
+									.checkbox
+										input(type="radio" name='material' id="material5")
+										label(for="material5") Другое
+									.checkbox
+										input(type="radio" name='material' id="material6")
+										label(for="material6") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Количество этажей
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Грунт на участке
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите данные объекта
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Длина обвязки (м)
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Материал обвязки
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Примерная стоимость вашего фундамента
+							._box.non-active(data-box="2")
+
+							._box.non-active(data-box="3")
+
+							._box.non-active(data-box="4")
+
+							._box.non-active(data-box="5")
+
+							._box.non-active(data-box="6")
+
+						
+					//- ._block
+					//- 	.choice.js-choice
+					//- 		span._title Уклон рельефа (%)
+					//- 		.range-slider
+					//- 			span.rs-label.js-label 0
+					//- 			input.rs-range(type="range" value="0" min="0" max="100")
+					//- 		.checkbox
+					//- 			input(type="checkbox" id="dont_know")
+					//- 			label(for="dont_know") Не знаю
+					//- 	.choice.js-choice
+					//- 		span._title Уклон рельефа (%)
+					//- 		.range-slider
+					//- 			span.rs-label.js-label 0
+					//- 			input.rs-range(type="range" value="0" min="0" max="100")
+					//- 		.checkbox
+					//- 			input(type="checkbox" id="dont_know2")
+					//- 			label(for="dont_know2") Не знаю
+					//- 	.choice.js-choice
+					//- 		span._title Удалённость от Иркутска (км)
+					//- 		.range-slider
+					//- 			span.rs-label.js-label 0
+					//- 			input.rs-range(type="range" value="0" min="0" max="100")
+					//- 		.checkbox
+					//- 			input(type="radio" name='city' id="in_city" checked)
+					//- 			label(for="in_city") Объект в Иркутске
+					//- 		.checkbox
+					//- 			input(type="radio" name='city' id="dont_know3")
+					//- 			label(for="dont_know3") Не знаю
+					//- 	.choice.js-choice
+					//- 		span._title Удалённость от Иркутска (км)
+					//- 		.range-slider
+					//- 			span.rs-label.js-label 0
+					//- 			input.rs-range(type="range" value="0" min="0" max="100")
+					//- 		.checkbox
+					//- 			input(type="radio" name='city1' id="in_city2" checked)
+					//- 			label(for="in_city2") В Иркутске
+					//- 		.checkbox
+					//- 			input(type="radio" name='city1' id="dont_know4")
+					//- 			label(for="dont_know4") Не знаю
+					//- a.btn(href="#") 
+					//- 	span ГОТОВО
 				.selection#selection
 					span._title Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?
 					span._subtitle Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.

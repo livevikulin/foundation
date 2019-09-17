@@ -2,7 +2,7 @@ import "jquery";
 import "slick-slider";
 
 $(document).ready(function() {
-
+	
 	//Навигация
 	$('.nav > ul > li > a').click(function (e) {
 		e.preventDefault();
@@ -32,6 +32,26 @@ $(document).ready(function() {
 			}
 		});
 	};
+
+	//Калькулятор
+	
+
+	$('.btn-form').on('click', function(e) {
+		let calc = $('[data-calc="calc"]').prop('checked'),
+			calcOne = $('[data-box="1"]'),
+			calcTwo = $('[data-box="2"]'),
+			calcThree = $('[data-box="3"]'),
+			calcFour = $('[data-box="4"]'),
+			calcFive = $('[data-box="5"]'),
+			calcSix = $('[data-box="6"]');
+
+
+		e.preventDefault();
+		console.log(calc);
+		if (calc == 111) {
+			calcOne.removeClass('non-active');
+		}
+	});
 
 	//Range slider
 	$('.rs-range').on("input", showSliderValue);
@@ -123,4 +143,6 @@ $(document).ready(function() {
 		centerMode: true,
 		variableWidth: true
 	});
-})
+	
+});
+
