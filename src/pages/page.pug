@@ -95,11 +95,11 @@ block content
 							span._subtitle 8-20 дней, в зависимости от объема работ
 							span._price от 12700 руб/м³
 				.calculator#calculator
-					span._title Рассчитайте примерную стоимость фундамента на он-лайн калькуляторе
 					._main
-						span._subtitle Какой тип фундамента ва нужен?
 						form._form(action="#")
 							._block
+								span._title Рассчитайте примерную стоимость фундамента на он-лайн калькуляторе
+								span._subtitle Какой тип фундамента вам нужен?
 								.checkbox
 									input(type="radio" name='foundation' id="foundation1" data-calc="calc" value="111" checked)
 									label(for="foundation1") Ленточный
@@ -121,10 +121,11 @@ block content
 								a.btn.btn-form(href="#") 
 									span Далее
 							._box.non-active(data-box="1")
+								span._title Ленточный фундамент
 								._slide
 									span._subtitle Материал стен
 									.checkbox
-										input(type="radio" name='material' id="material1")
+										input(type="radio" name='material' id="material1" checked)
 										label(for="material1") Бревно / Брус
 									.checkbox
 										input(type="radio" name='material' id="material2")
@@ -145,187 +146,831 @@ block content
 										span Далее
 								._slide.non-active
 									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor1" checked)
+										label(for="floor1") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor2")
+										label(for="floor2") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor3")
+										label(for="floor3") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor4")
+										label(for="floor4") Другое
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
 									span._subtitle Грунт на участке
+									.checkbox
+										input(type="radio" name='priming' id="priming1" checked)
+										label(for="priming1") Песок
+									.checkbox
+										input(type="radio" name='priming' id="priming2")
+										label(for="priming2") Глина
+									.checkbox
+										input(type="radio" name='priming' id="priming3")
+										label(for="priming3") Суглинок
+									.checkbox
+										input(type="radio" name='priming' id="priming4")
+										label(for="priming4") Речной песок
+									.checkbox
+										input(type="radio" name='priming' id="priming5")
+										label(for="priming5") Плывучие грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming6")
+										label(for="priming6") Скальные грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming7")
+										label(for="priming7") Гравий / Галька
+									.checkbox
+										input(type="radio" name='priming' id="priming8")
+										label(for="priming8") Другое
+									.checkbox
+										input(type="radio" name='priming' id="priming9")
+										label(for="priming9") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
 									span._subtitle Укажите данные объекта
+									.choice.js-choice
+										span._title Уклон рельефа (%)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know1")
+											label(for="dont_know1") Не знаю
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city" checked)
+											label(for="in_city") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know2")
+											label(for="dont_know2") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
 									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar1" checked)
+										label(for="calendar1") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar2")
+										label(for="calendar2") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar3")
+										label(for="calendar3") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar4")
+										label(for="calendar4") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar5")
+										label(for="calendar5") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите параметры фундамента
+									.choice.js-choice
+										span._title Длина всей ленты (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know3")
+											label(for="dont_know3") Не знаю
+									.choice.js-choice
+										span._title Глубина ленты в землю (см)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know4")
+											label(for="dont_know4") Не знаю
+									.choice.js-choice
+										span._title Толщина ленты (см)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know5")
+											label(for="dont_know5") Не знаю
+									.choice.js-choice
+										span._title Высота ленты над землёй (см)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know6")
+											label(for="dont_know6") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
+									span._subtitle Примерная стоимость вашего фундамента
+									span._price 65000 
+										span рублей
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
+							._box.non-active(data-box="2")
+								span._title Свайно-забивной фундамент
+								._slide
+									span._subtitle Материал стен
+									.checkbox
+										input(type="radio" name='material' id="material7" checked)
+										label(for="material7") Бревно / Брус
+									.checkbox
+										input(type="radio" name='material' id="material8")
+										label(for="material8") Пенобетон / Газобетон
+									.checkbox
+										input(type="radio" name='material' id="material9")
+										label(for="material9") Кирпич
+									.checkbox
+										input(type="radio" name='material' id="material10")
+										label(for="material10") Каркас / СИП-панели
+									.checkbox
+										input(type="radio" name='material' id="material11")
+										label(for="material11") Другое
+									.checkbox
+										input(type="radio" name='material' id="material12")
+										label(for="material12") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor5" checked)
+										label(for="floor5") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor6")
+										label(for="floor6") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor7")
+										label(for="floor7") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor8")
+										label(for="floor8") Другое
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Грунт на участке
+									.checkbox
+										input(type="radio" name='priming' id="priming10" checked)
+										label(for="priming10") Песок
+									.checkbox
+										input(type="radio" name='priming' id="priming11")
+										label(for="priming11") Глина
+									.checkbox
+										input(type="radio" name='priming' id="priming12")
+										label(for="priming12") Суглинок
+									.checkbox
+										input(type="radio" name='priming' id="priming13")
+										label(for="priming13") Речной песок
+									.checkbox
+										input(type="radio" name='priming' id="priming14")
+										label(for="priming14") Плывучие грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming15")
+										label(for="priming15") Скальные грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming16")
+										label(for="priming16") Гравий / Галька
+									.checkbox
+										input(type="radio" name='priming' id="priming17")
+										label(for="priming17") Другое
+									.checkbox
+										input(type="radio" name='priming' id="priming18")
+										label(for="priming18") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите данные объекта
+									.choice.js-choice
+										span._title Уклон рельефа (%)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know7")
+											label(for="dont_know7") Не знаю
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city2" checked)
+											label(for="in_city2") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know8")
+											label(for="dont_know8") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar6" checked)
+										label(for="calendar6") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar7")
+										label(for="calendar7") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar8")
+										label(for="calendar8") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar9")
+										label(for="calendar9") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar10")
+										label(for="calendar10") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
 									span._subtitle Длина обвязки (м)
+									.choice.js-choice
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know9")
+											label(for="dont_know9") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
 									span._subtitle Материал обвязки
+									.checkbox
+										input(type="radio" name='strapping' id="strapping1" checked)
+										label(for="strapping1") Брус
+									.checkbox
+										input(type="radio" name='strapping' id="strapping2")
+										label(for="strapping2") Швеллер
+									.checkbox
+										input(type="radio" name='strapping' id="strapping3")
+										label(for="strapping3") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
+									span._subtitle Примерная стоимость вашего фундамента
+									span._price 65000 
+										span рублей
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
+							._box.non-active(data-box="3")
+								span._title Свайно-винтовой фундамент
+								._slide
+									span._subtitle Материал стен
+									.checkbox
+										input(type="radio" name='material' id="material14" checked)
+										label(for="material14") Бревно / Брус
+									.checkbox
+										input(type="radio" name='material' id="material15")
+										label(for="material15") Пенобетон / Газобетон
+									.checkbox
+										input(type="radio" name='material' id="material16")
+										label(for="material16") Кирпич
+									.checkbox
+										input(type="radio" name='material' id="material17")
+										label(for="material17") Каркас / СИП-панели
+									.checkbox
+										input(type="radio" name='material' id="material18")
+										label(for="material18") Другое
+									.checkbox
+										input(type="radio" name='material' id="material19")
+										label(for="material19") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
 								._slide.non-active
+									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor9" checked)
+										label(for="floor9") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor10")
+										label(for="floor10") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor11")
+										label(for="floor11") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor12")
+										label(for="floor12") Другое
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Грунт на участке
+									.checkbox
+										input(type="radio" name='priming' id="priming19" checked)
+										label(for="priming19") Песок
+									.checkbox
+										input(type="radio" name='priming' id="priming20")
+										label(for="priming20") Глина
+									.checkbox
+										input(type="radio" name='priming' id="priming21")
+										label(for="priming21") Суглинок
+									.checkbox
+										input(type="radio" name='priming' id="priming22")
+										label(for="priming22") Речной песок
+									.checkbox
+										input(type="radio" name='priming' id="priming23")
+										label(for="priming23") Плывучие грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming24")
+										label(for="priming24") Скальные грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming25")
+										label(for="priming25") Гравий / Галька
+									.checkbox
+										input(type="radio" name='priming' id="priming26")
+										label(for="priming26") Другое
+									.checkbox
+										input(type="radio" name='priming' id="priming27")
+										label(for="priming27") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите данные объекта
+									.choice.js-choice
+										span._title Уклон рельефа (%)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know10")
+											label(for="dont_know10") Не знаю
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city3" checked)
+											label(for="in_city3") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know11")
+											label(for="dont_know11") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar11" checked)
+										label(for="calendar11") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar12")
+										label(for="calendar12") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar13")
+										label(for="calendar13") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar14")
+										label(for="calendar14") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar15")
+										label(for="calendar15") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Длина обвязки (м)
+									.choice.js-choice
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know12")
+											label(for="dont_know12") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Материал обвязки
+									.checkbox
+										input(type="radio" name='strapping' id="strapping4" checked)
+										label(for="strapping4") Брус
+									.checkbox
+										input(type="radio" name='strapping' id="strapping5")
+										label(for="strapping5") Швеллер
+									.checkbox
+										input(type="radio" name='strapping' id="strapping6")
+										label(for="strapping6") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
 									span._subtitle Примерная стоимость вашего фундамента
-							._box.non-active(data-box="2")
-								._slide
-									span._subtitle 2
-									.checkbox
-										input(type="radio" name='material' id="material1")
-										label(for="material1") Бревно / Брус
-									.checkbox
-										input(type="radio" name='material' id="material2")
-										label(for="material2") Пенобетон / Газобетон
-									.checkbox
-										input(type="radio" name='material' id="material3")
-										label(for="material3") Кирпич
-									.checkbox
-										input(type="radio" name='material' id="material4")
-										label(for="material4") Каркас / СИП-панели
-									.checkbox
-										input(type="radio" name='material' id="material5")
-										label(for="material5") Другое
-									.checkbox
-										input(type="radio" name='material' id="material6")
-										label(for="material6") Не знаю
-									a.btn.btn-next(href="#") 
-										span Далее
-							._box.non-active(data-box="3")
-								._slide
-									span._subtitle 3
-									.checkbox
-										input(type="radio" name='material' id="material1")
-										label(for="material1") Бревно / Брус
-									.checkbox
-										input(type="radio" name='material' id="material2")
-										label(for="material2") Пенобетон / Газобетон
-									.checkbox
-										input(type="radio" name='material' id="material3")
-										label(for="material3") Кирпич
-									.checkbox
-										input(type="radio" name='material' id="material4")
-										label(for="material4") Каркас / СИП-панели
-									.checkbox
-										input(type="radio" name='material' id="material5")
-										label(for="material5") Другое
-									.checkbox
-										input(type="radio" name='material' id="material6")
-										label(for="material6") Не знаю
-									a.btn.btn-next(href="#") 
-										span Далее
+									span._price 65000 
+										span рублей
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
 							._box.non-active(data-box="4")
+								span._title Фундамент монолитная плита
 								._slide
-									span._subtitle 4
+									span._subtitle Какой тип плиты вам нужен?
 									.checkbox
-										input(type="radio" name='material' id="material1")
-										label(for="material1") Бревно / Брус
+										input(type="radio" name='material' id="material19" checked)
+										label(for="material19") Плита
 									.checkbox
-										input(type="radio" name='material' id="material2")
-										label(for="material2") Пенобетон / Газобетон
+										input(type="radio" name='material' id="material20")
+										label(for="material20") УШП (Утеплённая шведская плита)
 									.checkbox
-										input(type="radio" name='material' id="material3")
-										label(for="material3") Кирпич
-									.checkbox
-										input(type="radio" name='material' id="material4")
-										label(for="material4") Каркас / СИП-панели
-									.checkbox
-										input(type="radio" name='material' id="material5")
-										label(for="material5") Другое
-									.checkbox
-										input(type="radio" name='material' id="material6")
-										label(for="material6") Не знаю
+										input(type="radio" name='material' id="material21")
+										label(for="material21") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
+								._slide.non-active
+									span._subtitle Материал стен
+									.checkbox
+										input(type="radio" name='material' id="material20" checked)
+										label(for="material20") Бревно / Брус
+									.checkbox
+										input(type="radio" name='material' id="material21")
+										label(for="material21") Пенобетон / Газобетон
+									.checkbox
+										input(type="radio" name='material' id="material22")
+										label(for="material22") Кирпич
+									.checkbox
+										input(type="radio" name='material' id="material23")
+										label(for="material23") Каркас / СИП-панели
+									.checkbox
+										input(type="radio" name='material' id="material24")
+										label(for="material24") Другое
+									.checkbox
+										input(type="radio" name='material' id="material25")
+										label(for="material25") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor13" checked)
+										label(for="floor13") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor14")
+										label(for="floor14") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor15")
+										label(for="floor15") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor16")
+										label(for="floor16") Другое
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Требуется выравнивание на участке?
+									.checkbox
+										input(type="radio" name='alignment' id="alignment1" checked)
+										label(for="alignment1") Да
+									.checkbox
+										input(type="radio" name='alignment' id="alignment2")
+										label(for="alignment2") Нет
+									.checkbox
+										input(type="radio" name='alignment' id="alignment3")
+										label(for="alignment3") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Удалённость от Иркутска (км)
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city4" checked)
+											label(for="in_city4") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know12")
+											label(for="dont_know12") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar16" checked)
+										label(for="calendar16") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar17")
+										label(for="calendar17") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar18")
+										label(for="calendar18") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar19")
+										label(for="calendar19") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar20")
+										label(for="calendar20") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите параметры фундамента
+									.choice.js-choice
+										span._title Длина плиты (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know13")
+											label(for="dont_know13") Не знаю
+									.choice.js-choice
+										span._title Ширина плиты (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know14")
+											label(for="dont_know14") Не знаю
+									.choice.js-choice
+										span._title Толщина плиты (см)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know15")
+											label(for="dont_know15") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
+									span._subtitle Примерная стоимость вашего фундамента
+									span._price 65000 
+										span рублей
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
 							._box.non-active(data-box="5")
+								span._title Растверковый
 								._slide
-									span._subtitle 5
+									span._subtitle Материал стен
 									.checkbox
-										input(type="radio" name='material' id="material1")
-										label(for="material1") Бревно / Брус
+										input(type="radio" name='material' id="material25" checked)
+										label(for="material25") Бревно / Брус
 									.checkbox
-										input(type="radio" name='material' id="material2")
-										label(for="material2") Пенобетон / Газобетон
+										input(type="radio" name='material' id="material26")
+										label(for="material26") Пенобетон / Газобетон
 									.checkbox
-										input(type="radio" name='material' id="material3")
-										label(for="material3") Кирпич
+										input(type="radio" name='material' id="material27")
+										label(for="material27") Кирпич
 									.checkbox
-										input(type="radio" name='material' id="material4")
-										label(for="material4") Каркас / СИП-панели
+										input(type="radio" name='material' id="material28")
+										label(for="material28") Каркас / СИП-панели
 									.checkbox
-										input(type="radio" name='material' id="material5")
-										label(for="material5") Другое
+										input(type="radio" name='material' id="material29")
+										label(for="material29") Другое
 									.checkbox
-										input(type="radio" name='material' id="material6")
-										label(for="material6") Не знаю
+										input(type="radio" name='material' id="material30")
+										label(for="material30") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
+								._slide.non-active
+									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor17" checked)
+										label(for="floor17") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor18")
+										label(for="floor18") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor19")
+										label(for="floor19") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor20")
+										label(for="floor20") Другое
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Грунт на участке
+									.checkbox
+										input(type="radio" name='priming' id="priming28" checked)
+										label(for="priming28") Песок
+									.checkbox
+										input(type="radio" name='priming' id="priming29")
+										label(for="priming29") Глина
+									.checkbox
+										input(type="radio" name='priming' id="priming30")
+										label(for="priming30") Суглинок
+									.checkbox
+										input(type="radio" name='priming' id="priming31")
+										label(for="priming31") Речной песок
+									.checkbox
+										input(type="radio" name='priming' id="priming32")
+										label(for="priming32") Плывучие грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming33")
+										label(for="priming33") Скальные грунты
+									.checkbox
+										input(type="radio" name='priming' id="priming34")
+										label(for="priming34") Гравий / Галька
+									.checkbox
+										input(type="radio" name='priming' id="priming35")
+										label(for="priming35") Другое
+									.checkbox
+										input(type="radio" name='priming' id="priming36")
+										label(for="priming36") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите данные объекта
+									.choice.js-choice
+										span._title Уклон рельефа (%)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know16")
+											label(for="dont_know16") Не знаю
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city5" checked)
+											label(for="in_city5") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know17")
+											label(for="dont_know17") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar21" checked)
+										label(for="calendar21") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar22")
+										label(for="calendar22") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar23")
+										label(for="calendar23") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar24")
+										label(for="calendar24") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar25")
+										label(for="calendar25") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите параметры фундамента
+									.choice.js-choice
+										span._title Длина плиты (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know18")
+											label(for="dont_know18") Не знаю
+									.choice.js-choice
+										span._title Ширина плиты (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know19")
+											label(for="dont_know19") Не знаю
+									.choice.js-choice
+										span._title Толщина плиты (см)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know20")
+											label(for="dont_know20") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
+									span._subtitle Примерная стоимость вашего фундамента
+									span._price 65000 
+										span рублей
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
 							._box.non-active(data-box="6")
+								span._title Не знаю какой фундамент
 								._slide
-									span._subtitle 6
+									span._subtitle Материал стен
 									.checkbox
-										input(type="radio" name='material' id="material1")
-										label(for="material1") Бревно / Брус
+										input(type="radio" name='material' id="material31" checked)
+										label(for="material31") Бревно / Брус
 									.checkbox
-										input(type="radio" name='material' id="material2")
-										label(for="material2") Пенобетон / Газобетон
+										input(type="radio" name='material' id="material32")
+										label(for="material32") Пенобетон / Газобетон
 									.checkbox
-										input(type="radio" name='material' id="material3")
-										label(for="material3") Кирпич
+										input(type="radio" name='material' id="material33")
+										label(for="material33") Кирпич
 									.checkbox
-										input(type="radio" name='material' id="material4")
-										label(for="material4") Каркас / СИП-панели
+										input(type="radio" name='material' id="material34")
+										label(for="material34") Каркас / СИП-панели
 									.checkbox
-										input(type="radio" name='material' id="material5")
-										label(for="material5") Другое
+										input(type="radio" name='material' id="material35")
+										label(for="material35") Другое
 									.checkbox
-										input(type="radio" name='material' id="material6")
-										label(for="material6") Не знаю
+										input(type="radio" name='material' id="material36")
+										label(for="material36") Не знаю
 									a.btn.btn-next(href="#") 
 										span Далее
-						
-					//- ._block
-					//- 	.choice.js-choice
-					//- 		span._title Уклон рельефа (%)
-					//- 		.range-slider
-					//- 			span.rs-label.js-label 0
-					//- 			input.rs-range(type="range" value="0" min="0" max="100")
-					//- 		.checkbox
-					//- 			input(type="checkbox" id="dont_know")
-					//- 			label(for="dont_know") Не знаю
-					//- 	.choice.js-choice
-					//- 		span._title Уклон рельефа (%)
-					//- 		.range-slider
-					//- 			span.rs-label.js-label 0
-					//- 			input.rs-range(type="range" value="0" min="0" max="100")
-					//- 		.checkbox
-					//- 			input(type="checkbox" id="dont_know2")
-					//- 			label(for="dont_know2") Не знаю
-					//- 	.choice.js-choice
-					//- 		span._title Удалённость от Иркутска (км)
-					//- 		.range-slider
-					//- 			span.rs-label.js-label 0
-					//- 			input.rs-range(type="range" value="0" min="0" max="100")
-					//- 		.checkbox
-					//- 			input(type="radio" name='city' id="in_city" checked)
-					//- 			label(for="in_city") Объект в Иркутске
-					//- 		.checkbox
-					//- 			input(type="radio" name='city' id="dont_know3")
-					//- 			label(for="dont_know3") Не знаю
-					//- 	.choice.js-choice
-					//- 		span._title Удалённость от Иркутска (км)
-					//- 		.range-slider
-					//- 			span.rs-label.js-label 0
-					//- 			input.rs-range(type="range" value="0" min="0" max="100")
-					//- 		.checkbox
-					//- 			input(type="radio" name='city1' id="in_city2" checked)
-					//- 			label(for="in_city2") В Иркутске
-					//- 		.checkbox
-					//- 			input(type="radio" name='city1' id="dont_know4")
-					//- 			label(for="dont_know4") Не знаю
-					//- a.btn(href="#") 
-					//- 	span ГОТОВО
+								._slide.non-active
+									span._subtitle Количество этажей
+									.checkbox
+										input(type="radio" name='floor' id="floor21" checked)
+										label(for="floor21") 1
+									.checkbox
+										input(type="radio" name='floor' id="floor22")
+										label(for="floor22") 2
+									.checkbox
+										input(type="radio" name='floor' id="floor23")
+										label(for="floor23") 3 или 2 с мансардой
+									.checkbox
+										input(type="radio" name='floor' id="floor24")
+										label(for="floor24") Другое
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите площадь постройки
+									.choice.js-choice
+										span._title Длина (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know21")
+											label(for="dont_know21") Не знаю
+									.choice.js-choice
+										span._title Ширина (м)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" name='city' id="dont_know22")
+											label(for="dont_know22") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Укажите данные объекта
+									.choice.js-choice
+										span._title Уклон рельефа (%)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="checkbox" id="dont_know23")
+											label(for="dont_know23") Не знаю
+									.choice.js-choice
+										span._title Удалённость от Иркутска (км)
+										.range-slider
+											span.rs-label.js-label 0
+											input.rs-range(type="range" value="0" min="0" max="100")
+										.checkbox
+											input(type="radio" name='city' id="in_city6" checked)
+											label(for="in_city6") Объект в Иркутске
+										.checkbox
+											input(type="radio" name='city' id="dont_know24")
+											label(for="dont_know24") Не знаю
+									a.btn.btn-next(href="#") 
+										span Далее
+								._slide.non-active
+									span._subtitle Дата строительства
+									.checkbox
+										input(type="radio" name='calendar' id="calendar26" checked)
+										label(for="calendar26") В ближайшие 2 недели
+									.checkbox
+										input(type="radio" name='calendar' id="calendar27")
+										label(for="calendar27") В течение месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar28")
+										label(for="calendar28") В ближайшие 3 месяца
+									.checkbox
+										input(type="radio" name='calendar' id="calendar29")
+										label(for="calendar29") В ближайшие полгода-год
+									.checkbox
+										input(type="radio" name='calendar' id="calendar30")
+										label(for="calendar30") Не знаю
+									a.btn.btn-next(href="#") 
+										span Расчитать
+								._slide.non-active
+									span._hint Укажите номер телефона и отправьте нам параметры объекта, чтобы получить точный расчёт стоимости, а также рекомендации по строительству 
+									._result-block
+										._phone
+											input(type="text" placeholder="+7" class="phone_calc")
+										a.btn(href="#")
+											span ОТПРАВИТЬ ПАРАМЕТРЫ
 				.selection#selection
 					span._title Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?
 					span._subtitle Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.

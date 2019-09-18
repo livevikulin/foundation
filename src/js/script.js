@@ -38,6 +38,7 @@ $(document).ready(function() {
 
 	$('.btn-form').on('click', function(e) {
 		let calc = $("input:radio[name ='foundation']:checked").val(),
+			mainBlock = $('.calculator__block'),
 			calcOne = $('[data-box="1"]'),
 			calcTwo = $('[data-box="2"]'),
 			calcThree = $('[data-box="3"]'),
@@ -48,18 +49,29 @@ $(document).ready(function() {
 
 		e.preventDefault();
 		if (calc == 111) {
+			mainBlock.addClass('non-active');
 			calcOne.removeClass('non-active');
 		} else if (calc == 222) {
+			mainBlock.addClass('non-active');
 			calcTwo.removeClass('non-active');
 		} else if (calc == 333) {
+			mainBlock.addClass('non-active');
 			calcThree.removeClass('non-active');
 		} else if (calc == 444) {
+			mainBlock.addClass('non-active');
 			calcFour.removeClass('non-active');
 		} else if (calc == 555) {
+			mainBlock.addClass('non-active');
 			calcFive.removeClass('non-active');
 		} else if (calc == 666) {
+			mainBlock.addClass('non-active');
 			calcSix.removeClass('non-active');
 		}
+	});
+
+	$('.btn-next').on('click', function(e) {
+		e.preventDefault();
+		$(this).parent().addClass('non-active').next().removeClass('non-active');
 	});
 
 	//Range slider
@@ -75,6 +87,7 @@ $(document).ready(function() {
 
 	//Маска
 	$("#phone").mask("+7 (999)-999-9999", {autoclear: false});
+	$(".phone_calc").mask("+7 (999)-999-9999", {autoclear: false});
 
 	//Табы в блоке с примерами работ
 	$('.tabs-box').hide();
