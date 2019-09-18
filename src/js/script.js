@@ -47,9 +47,18 @@ $(document).ready(function() {
 
 
 		e.preventDefault();
-		console.log(calc);
 		if (calc == 111) {
 			calcOne.removeClass('non-active');
+		} else if (calc == 222) {
+			calcTwo.removeClass('non-active');
+		} else if (calc == 333) {
+			calcThree.removeClass('non-active');
+		} else if (calc == 444) {
+			calcFour.removeClass('non-active');
+		} else if (calc == 555) {
+			calcFive.removeClass('non-active');
+		} else if (calc == 666) {
+			calcSix.removeClass('non-active');
 		}
 	});
 
