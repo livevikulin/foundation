@@ -37,7 +37,7 @@ $(document).ready(function() {
 	
 
 	$('.btn-form').on('click', function(e) {
-		let calc = $('[data-calc="calc"]').prop('checked'),
+		let calc = $("input:radio[name ='foundation']:checked").val(),
 			calcOne = $('[data-box="1"]'),
 			calcTwo = $('[data-box="2"]'),
 			calcThree = $('[data-box="3"]'),
