@@ -103,6 +103,12 @@ main
 		img
 			width: 100%
 			object-fit: cover
+	&__image-mobile
+		display: none
+		width: 100%
+		img
+			width: 100%
+			object-fit: cover
 
 .type
 	padding-bottom: 85px
@@ -953,3 +959,200 @@ main
 		padding: 20px 0 0
 	.hero
 		padding-bottom: 100px
+
+@media (max-width: 768px)
+	.btn
+		padding: 19px 92px
+	.hero
+		&__info
+			width: 100%
+			h1
+				width: auto
+				font-size: 20px
+				margin-bottom: 20px
+		&__image
+			display: none
+		&__image-mobile
+			display: block
+			margin-bottom: 20px
+	.type
+		&__title
+			width: auto
+			font-size: 20px
+			line-height: 20px
+			margin-bottom: 35px
+		&__boxes
+			flex-direction: column
+		&-box
+			width: 100%
+			margin-bottom: 15px
+			&__image
+				width: 300px
+				margin-bottom: 25px
+				img
+					height: 100%
+	.calculator
+		padding: 50px 0 150px
+		&:before
+			width: 260%
+			left: -234px
+		&__title
+			font-size: 20px
+			line-height: 20px
+			margin-bottom: 25px
+		&__subtitle
+			font-size: 16px
+		&__phone
+			margin-bottom: 15px
+		&__result-block
+			flex-direction: column
+			.btn
+				width: 100%
+				box-sizing: border-box
+				margin-left: 0
+		.btn-form
+			width: 100%
+			box-sizing: border-box
+		.btn-next
+			width: 100%
+			box-sizing: border-box
+		.range-slider
+			width: 300px
+	.checkbox
+		label
+			width: 100%
+	.choice
+		width: 100%
+	.selection
+		padding: 100px 0
+		&__title
+			font-size: 24px
+			line-height: 32px
+		&__subtitle
+			font-size: 16px
+			line-height: 22px
+		&__block
+			p
+				margin-bottom: 40px
+				span
+					display: block
+					width: 100%
+					&:first-child
+						margin-bottom: 20px
+	.form
+		background-image: none
+		padding: 40px 10px
+		&__title
+			font-size: 18px
+			line-height: 20px
+			margin-bottom: 30px
+		&__block
+			text-align: center
+			.btn
+				width: 100%
+				box-sizing: border-box
+				margin-left: 0
+				margin-top: 15px
+		.confirm
+			margin-top: 32px
+			text-align: left
+	.examples
+		padding: 100px 0
+		&__title
+			font-size: 19px
+			line-height: 20px
+		.tabs-nav
+			display: none
+		.tabs-block
+			width: 100%
+		.tabs-slider .slick-slide
+			width: 300px
+			height: 190px
+		.tabs-slider .slick-prev
+			left: 5px
+		.tabs-slider .slick-next
+			right: 5px
+		.tabs-slide
+			height: 190px
+		.tabs-info
+			flex-wrap: wrap
+			ul
+				width: auto
+				&:first-child
+					margin-right: 44px
+				&:last-child
+					margin-top: 35px
+	.about
+		padding-bottom: 100px
+		&__title
+			font-size: 20px
+			margin-bottom: 30px
+		&__subtitle
+			font-size: 16px
+			line-height: 22px
+		&__block
+			flex-direction: column
+		&__box
+			width: 100%
+			height: auto
+			margin-bottom: 30px
+			&:nth-child(1)
+				order: 0
+			&:nth-child(2)
+				order: 2
+			&:nth-child(3)
+				order: 1
+				text-align: right
+			&:nth-child(4)
+				order: 3
+				text-align: right
+				margin-top: 40px
+				margin-bottom: 0
+	.technics
+		&__title
+			font-style: 20px
+			line-height: 20px
+		&__block
+			flex-direction: column
+		&__box
+			width: 100%
+			margin-bottom: 40px
+	.specialists
+		overflow-x: hidden
+		&-slider
+			display: none
+		&__button
+			display: none
+		&-slide
+			&__photo
+				width: 100%
+		.slick-slide
+			width: 230px !important
+			margin-right: 10px
+		.slick-track
+			width: 2640px !important
+	.review
+		&-text
+			width: 100%
+			padding: 20px 10px 70px
+			&:before
+				display: none
+	.reviews
+		padding-bottom: 100px
+		&__title
+			font-size: 20px
+			line-height: 20px
+		&__slide
+			width: 250px !important
+			margin: 0
+			margin-right: 10px
+	.contacts
+		background-image: none
+		background-color: #eaebef
+		padding: 50px 10px
+		.btn
+			padding: 20px 52px
+		span
+			color: $title
+		
+

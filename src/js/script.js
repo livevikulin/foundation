@@ -113,6 +113,14 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
+	//Инициализация слайдера со специалистами(мобильная версия)
+	$('.specialists-slider__mobile').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true,
+		infinite: true
+	});
+
 	//Анимация для смены слайдов с примерами работ
 	slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		
@@ -160,9 +168,9 @@ $(document).ready(function() {
 	//Инициализация слайдера с отзывами
 	$('.reviews__slider').slick({
 		infinite: true,
-		autoplay: true,
+		autoplay: false,
 		speed: 800,
-		centerMode: true,
+		centerMode: false,
 		variableWidth: true
 	});
 	
