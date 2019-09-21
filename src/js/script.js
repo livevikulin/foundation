@@ -116,8 +116,6 @@ $(document).ready(function() {
 	//Инициализация слайдера со специалистами(мобильная версия)
 	$('.specialists-slider__mobile').slick({
 		variableWidth: true,
-		infinite: true,
-		draggable: true
 	});
 
 	//Анимация для смены слайдов с примерами работ
