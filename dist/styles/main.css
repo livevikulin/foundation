@@ -1588,8 +1588,12 @@ main {
     margin: 0 auto;
     padding: 0 10px;
     box-sizing: border-box; }
+  body {
+    overflow-x: hidden; }
   .btn {
-    padding: 19px 92px; }
+    width: 100%;
+    box-sizing: border-box;
+    padding: 19px 20px; }
   .hero__info {
     width: 100%; }
     .hero__info h1 {
