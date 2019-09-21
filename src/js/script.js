@@ -115,10 +115,9 @@ $(document).ready(function() {
 
 	//Инициализация слайдера со специалистами(мобильная версия)
 	$('.specialists-slider__mobile').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
 		variableWidth: true,
-		infinite: true
+		infinite: true,
+		draggable: true
 	});
 
 	//Анимация для смены слайдов с примерами работ
@@ -170,9 +169,17 @@ $(document).ready(function() {
 		infinite: true,
 		autoplay: false,
 		speed: 800,
-		centerMode: false,
-		variableWidth: true
+		centerMode: true,
+		variableWidth: true,
+		responsive: [{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				centerMode: false,
+				variableWidth: true,
+			}
+		}]
 	});
-	
 });
 

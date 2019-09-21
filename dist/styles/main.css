@@ -1318,6 +1318,8 @@ main {
     .specialists-slide__photo img {
       width: 100%;
       object-fit: cover; }
+  .specialists-slider__mobile {
+    display: none; }
   .specialists .slick-slide {
     width: 314px !important; }
   .specialists .slick-track {
@@ -1747,6 +1749,8 @@ main {
     overflow-x: hidden; }
     .specialists-slider {
       display: none; }
+      .specialists-slider__mobile {
+        display: block; }
     .specialists__button {
       display: none; }
     .specialists-slide__photo {
