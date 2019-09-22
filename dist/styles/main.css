@@ -1599,8 +1599,7 @@ main {
 
 .content {
   width: 80%;
-  margin: 0 0 0 auto;
-  overflow-x: hidden; }
+  margin: 0 0 0 auto; }
 
 .btn {
   display: inline-block;
@@ -1823,19 +1822,12 @@ main {
       font-weight: 400;
       letter-spacing: 0.35px; }
 
-.calculator {
+.calculator-block {
   padding: 120px 0 115px;
-  overflow-x: hidden;
+  background: #eaebef; }
+
+.calculator {
   position: relative; }
-  .calculator:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: -497px;
-    width: 100vw;
-    height: 100%;
-    background: #eaebef;
-    z-index: -1; }
   .calculator__title {
     display: block;
     max-width: 500px;
@@ -2788,8 +2780,7 @@ main {
       .type-box__image img {
         height: 100%; }
   .calculator {
-    padding: 50px 0 150px;
-    overflow-x: hidden; }
+    padding: 50px 0 150px; }
     .calculator:before {
       width: 260%;
       left: -234px; }
