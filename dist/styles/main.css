@@ -2942,7 +2942,8 @@ main {
       color: #2b2c28; }
   .header {
     justify-content: space-between;
-    padding: 20px 0 0; }
+    padding: 20px 0 0;
+    overflow-x: hidden; }
     .header__logo {
       width: 76px;
       height: 44px; }
