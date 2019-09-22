@@ -2950,6 +2950,8 @@ main {
         width: 100%; }
     .header__phone {
       width: auto; }
+      .header__phone a:before {
+        display: none; }
     .header__address {
       display: none; }
   .footer {
