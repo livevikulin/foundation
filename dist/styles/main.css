@@ -1599,7 +1599,8 @@ main {
 
 .content {
   width: 80%;
-  margin: 0 0 0 auto; }
+  margin: 0 0 0 auto;
+  overflow-x: hidden; }
 
 .btn {
   display: inline-block;
@@ -1824,6 +1825,7 @@ main {
 
 .calculator {
   padding: 120px 0 115px;
+  overflow-x: hidden;
   position: relative; }
   .calculator:before {
     position: absolute;
@@ -2786,7 +2788,8 @@ main {
       .type-box__image img {
         height: 100%; }
   .calculator {
-    padding: 50px 0 150px; }
+    padding: 50px 0 150px;
+    overflow-x: hidden; }
     .calculator:before {
       width: 260%;
       left: -234px; }
