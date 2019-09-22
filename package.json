@@ -52,6 +52,7 @@
 	},
 	"dependencies": {
 		"ion-rangeslider": "^2.3.0",
+		"izimodal": "^1.5.1",
 		"jquery": "^3.4.1",
 		"jquery-ui-bundle": "^1.12.1-migrate",
 		"jquery-ui-slider": "^1.12.1",

@@ -1,5 +1,6 @@
 import "jquery";
 import "slick-slider";
+import "izimodal";
 
 $(document).ready(function() {
 	
@@ -84,6 +85,18 @@ $(document).ready(function() {
 		const bulletPosition = ($el.val() / $el.attr('max'));
 		$label.css('left', (bulletPosition * 428) + "px");
 	};
+
+	//Модалки
+	$("#modal").iziModal();
+
+	$('#heroBtn').on('click', function(e) {
+		e.preventDefault();
+		$(this).next('.modal-form').show();
+	});
+
+	$('.modal-form__close').on('click', function() {
+		$(this).parent().hide();
+	});
 
 	//Маска
 	$("#phone").mask("+7 (999)-999-9999", {autoclear: false});
