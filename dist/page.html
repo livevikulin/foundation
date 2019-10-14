@@ -30,7 +30,7 @@
     </header>
     <main>
       <div class="container">
-        <div class="nav">
+        <nav class="nav">
           <ul>
             <li class="nav-active"><a href="#hero"> <span>ЗАКАЗАТЬ РАСЧЁТ</span></a></li>
             <li><a href="#type"> <span>ВИДЫ ФУНДАМЕНТОВ</span></a></li>
@@ -43,9 +43,9 @@
             <li><a href="#reviews"> <span>ОТЗЫВЫ</span></a></li>
             <li><a href="#contacts"> <span>КОНТАКТЫ</span></a></li>
           </ul>
-        </div>
+        </nav>
         <div class="content">
-          <div class="hero">
+          <section class="hero" id="hero">
             <div class="hero__info">
               <h1>Строим фундаменты под малоэтажные дома в Иркутской области</h1>
               <div class="hero__image-mobile"><img src="img/hero-img.jpg" alt=""></div><span class="hero__subtitle">Закажите бесплатный расчёт стоимости вашего фундамента</span><a class="btn" id="heroBtn" href="#"> <span>ЗАКАЗАТЬ РАСЧЁТ</span></a>
@@ -54,14 +54,15 @@
                   <input type="text" placeholder="+7" id="phone_1"><a class="btn" href="#"> <span>ОТПРАВИТЬ ЗАЯВКУ</span></a>
                 </div>
                 <div class="confirm">
-                  <input type="checkbox" id="check_confirm">
-                  <label for="check_confirm">Я подтверждаю <a href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">условия обработки персональных данных</a></label>
+                  <input type="checkbox" id="modal-check_confirm">
+                  <label for="modal-check_confirm">Я подтверждаю <a href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">условия обработки персональных данных</a></label>
                 </div>
               </div>
             </div>
             <div class="hero__image"><img src="img/hero-img.jpg" alt=""></div>
-          </div>
-          <div class="type" id="type"><span class="type__title">Типы фундамента, которые мы строим</span>
+          </section>
+          <section class="type" id="type">
+            <h2 class="type__title">Типы фундамента, которые мы строим</h2>
             <div class="type__boxes">
               <div class="type-box">
                 <div class="type-box__image"><img src="img/type1.jpg" alt=""></div><span class="type-box__title">Свайно-забивной фундамент</span><span class="type-box__caption"> Назначение</span><span class="type-box__subtitle">Быстровозводимый и экономичный вид фундамент.</span><span class="type-box__caption">Сроки строительства:</span><span class="type-box__subtitle">8-20 дней, в зависимости от объема работ</span><span class="type-box__price">от 4500 руб/за сваю</span>
@@ -79,10 +80,10 @@
                 <div class="type-box__image"><img src="img/type5.jpg" alt=""></div><span class="type-box__title">Ленточный фундамент со сваями</span><span class="type-box__caption"> Назначение</span><span class="type-box__subtitle">Традиционный вид фундамента для тяжелых и средних домов</span><span class="type-box__caption">Сроки строительства:</span><span class="type-box__subtitle">8-20 дней, в зависимости от объема работ</span><span class="type-box__price">от 12700 руб/м³</span>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-      <div class="calculator-block" id="calculator">
+      <section class="calculator-block" id="calculator">
         <div class="container">
           <div class="content">
             <div class="calculator">
@@ -1050,10 +1051,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div class="container">
         <div class="content">
-          <div class="selection" id="selection"><span class="selection__title">Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?</span><span class="selection__subtitle">Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.</span>
+          <section class="selection" id="selection">
+            <h2 class="selection__title">Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?</h2><span class="selection__subtitle">Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.</span>
             <div class="selection__block">
               <p><span>Подберём оптимальный тип фундамента</span><span>В большинстве случаев стоимость фундамента можно снизить за счёт правильного анализа проекта. В зависимости от грунта и строения, можно рассчитать достаточные характеристики для несущей конструкции, что поможет сэкономить ваш бюджет за счёт количества материала. Сэкономленная сумма может измеряться в десятках тысяч рублей</span></p>
               <p><span>Предложим вариант строения на ваш фундамент</span><span>У вас уже есть проект фундамента, но пока нет окончательного решения какой дом строить? Мы поможем определиться с конструкцией дома и материалами для строительства. А так же внесём изменения в проект фундамента, если он окажется неподходящим для строения. Эти мероприятия помогут сэкономить ваш бюджет и создать прочную конструкцию.</span></p>
@@ -1061,8 +1063,9 @@
               <p><span>Рассчитаем состав фундамента</span><span>В некоторых случаях прочности конструкции можно достичь за счёт состава фундамента, а не его количества бетона. Наши специалисты знают какой состав бетона применить в различных ситуациях. Это так же может снизить стоимость конечного результата.</span></p>
               <p><span>Дополнительно можно провести геологическую разведку</span><span>На участке с малоизученным грунтом мы дополнительно можем провести глубокую геологическую разведку, что даст максимальные сведения о свойствах участка под строительство.</span></p>
             </div>
-          </div>
-          <div class="form"><span class="form__title">Закажите выезд специалиста на ваш объект для оценки проекта </span>
+          </section>
+          <section class="form">
+            <h2 class="form__title">Закажите выезд специалиста на ваш объект для оценки проекта </h2>
             <form class="form__block" action="#">
               <input type="text" placeholder="+7" id="phone"><a class="btn" href="#"> <span>ЗАКАЗАТЬ ВЫЕЗД</span></a>
               <div class="confirm">
@@ -1070,8 +1073,9 @@
                 <label for="check_confirm">Я подтверждаю <a href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">условия обработки персональных данных</a></label>
               </div>
             </form>
-          </div>
-          <div class="examples" id="examples"><span class="examples__title">Примеры работ, которые мы можем реализовать для вас</span>
+          </section>
+          <section class="examples" id="examples">
+            <h2 class="examples__title">Примеры работ, которые мы можем реализовать для вас</h2>
             <div class="examples__main">
               <ul class="tabs-nav">
                 <li><a href="#tab1"><span>СВАЙНЫЙ</span></a></li>
@@ -1203,16 +1207,18 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="about" id="about"><span class="about__title">О нас</span><span class="about__subtitle">Азбука фундамента – строительная компания, занимающаяся созданием различных типов фундамента. Мы помогаем людям строить надёжные и недорогие фундаменты, а так же избежать ошибок в этом процессе. Такие результаты достигаются благодаря нашим ответственным специалистам и наличию собственной специальной техники.</span>
+          </section>
+          <section class="about" id="about">
+            <h2 class="about__title">О нас</h2><span class="about__subtitle">Азбука фундамента – строительная компания, занимающаяся созданием различных типов фундамента. Мы помогаем людям строить надёжные и недорогие фундаменты, а так же избежать ошибок в этом процессе. Такие результаты достигаются благодаря нашим ответственным специалистам и наличию собственной специальной техники.</span>
             <div class="about__block">
               <div class="about__box"><span class="about-box__title">166</span><span class="about-box__subtitle">Проектов за 2018 год</span></div>
               <div class="about__box about__box-reverse"><span class="about-box__title">до 15 лет*</span><span class="about-box__subtitle">Гарантия <br> на фундамент</span><span class="about-box__text">*При проведении геологической разведки</span></div>
               <div class="about__box"><span class="about-box__title">от 1 дня</span><span class="about-box__subtitle">Сроки строительства</span></div>
               <div class="about__box about__box-reverse"><span class="about-box__title">15%</span><span class="about-box__subtitle">Скидка на <br> предварительный <br> заказ</span></div>
             </div>
-          </div>
-          <div class="technics" id="technics"><span class="technics__title">Мы имеем свой парк спецтехники</span>
+          </section>
+          <section class="technics" id="technics">
+            <h2 class="technics__title">Мы имеем свой парк спецтехники</h2>
             <div class="technics__block">
               <div class="technics__box">
                 <div class="technics__image"><img src="img/car1.jpg" alt=""></div><span class="technics__subtitle">Кран-борт эвакуатор ISUZU</span>
@@ -1227,8 +1233,9 @@
                 <div class="technics__image"><img src="img/car4.jpg" alt=""></div><span class="technics__subtitle">Трактор</span>
               </div>
             </div>
-          </div>
-          <div class="specialists" id="specialists"><span class="specialists__title">Наши специалисты</span>
+          </section>
+          <section class="specialists" id="specialists">
+            <h2 class="specialists__title">Наши специалисты</h2>
             <div class="specialists-slider__mobile">
               <div class="specialists-slide">
                 <div class="specialists-slide__photo"><img src="img/spec1.jpg" alt=""></div><span class="specialists__name">Александр Непомнящий</span><span class="specialists__post">Директор</span>
@@ -1289,8 +1296,9 @@
               </div>
               <div class="specialists__box specialists__button"><span>Другие сотрудники</span></div>
             </div>
-          </div>
-          <div class="reviews" id="reviews"><span class="reviews__title">Отзывы наших заказчиков</span>
+          </section>
+          <section class="reviews" id="reviews">
+            <h2 class="reviews__title">Отзывы наших заказчиков</h2>
             <div class="reviews__slider">
               <div class="reviews__slide">
                 <div class="review-text"><span>Устанавливали нам на 9 просеке винтовые сваи. Очень приемлемые цены, с менеджером Андреем всегда можно договориться , все сделали в срок и за цену, которая значительно ниже конкурентов. Всем рекомендую</span></div>
@@ -1311,10 +1319,20 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="contacts" id="contacts"><span class="contacts__title">Контакты</span>
-            <div class="contacts-block"><span class="contacts-block__title">Адрес:</span><span class="contacts-block__subtitle">ул. Черского 1Б.</span><span class="contacts-block__title">Телефон:</span><span class="contacts-block__subtitle">+7 (3952) 90-48-90</span><span class="contacts-block__title">Эл. почта:</span><span class="contacts-block__subtitle">afundament@ya.ru</span></div><a class="btn" href="#"><span>ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</span></a>
-          </div>
+          </section>
+          <section class="contacts" id="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts-block"><span class="contacts-block__title">Адрес:</span><span class="contacts-block__subtitle">ул. Черского 1Б.</span><span class="contacts-block__title">Телефон:</span><span class="contacts-block__subtitle">+7 (3952) 90-48-90</span><span class="contacts-block__title">Эл. почта:</span><span class="contacts-block__subtitle">afundament@ya.ru</span></div><a class="btn" id="footerBtn" href="#"><span>ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ</span></a>
+            <div class="modal-form"><span class="modal-form__title">Введите номер телефона и отправьте заявку на расчёт стоимости вашего фундамента</span><span class="modal-form__close"><svg id="SVGDoc" width="19" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 19 18"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Line 19</title><path d="M1.5,1.5l16,16" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f7f7f7" stroke-miterlimit="50" stroke-width="2"></path></g><g><title>Line 20</title><path d="M17.5,1.5l-16,16" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f7f7f7" stroke-miterlimit="50" stroke-width="2"></path></g></g></svg></span>
+              <div class="modal-form__block">
+                <input type="text" placeholder="+7" id="phone_1"><a class="btn" href="#"> <span>ОТПРАВИТЬ ЗАЯВКУ</span></a>
+              </div>
+              <div class="confirm">
+                <input type="checkbox" id="modal2-check_confirm">
+                <label for="modal2-check_confirm">Я подтверждаю <a href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">условия обработки персональных данных</a></label>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -1373,6 +1391,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

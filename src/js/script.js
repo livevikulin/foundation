@@ -14,25 +14,29 @@ $(document).ready(function() {
 		}, 500);
 	})
 
-	$(window).scroll(function () {
-		onScrollHandle();
+	$(".nav").onePageNav({
+		currentClass: "nav-active",
 	});
 
-	function onScrollHandle() {
-		var currentScrollPos = $(document).scrollTop();
+	// $(window).scroll(function () {
+	// 	onScrollHandle();
+	// });
 
-		$('.nav > ul > li > a').each(function () {
-			var curLink = $(this);
-			var refElem = $(curLink.attr('href'));
-			if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
-				$('.nav > ul > li').removeClass("nav-active");
-				curLink.parent().addClass("nav-active");
-			}
-			else {
-				curLink.parent().removeClass("nav-active");
-			}
-		});
-	};
+	// function onScrollHandle() {
+	// 	var currentScrollPos = $(document).scrollTop();
+
+	// 	$('.nav > ul > li > a').each(function () {
+	// 		var curLink = $(this);
+	// 		var refElem = $(curLink.attr('href'));
+	// 		if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos + 15) {
+	// 			$('.nav > ul > li').removeClass("nav-active");
+	// 			curLink.parent().addClass("nav-active");
+	// 		}
+	// 		else {
+	// 			curLink.parent().removeClass("nav-active");
+	// 		}
+	// 	});
+	// };
 
 	//Калькулятор
 	
@@ -90,6 +94,10 @@ $(document).ready(function() {
 	$("#modal").iziModal();
 
 	$('#heroBtn').on('click', function(e) {
+		e.preventDefault();
+		$(this).next('.modal-form').show();
+	});
+	$('#footerBtn').on('click', function(e) {
 		e.preventDefault();
 		$(this).next('.modal-form').show();
 	});

@@ -947,6 +947,7 @@ main
 .contacts
 	padding: 60px 0 302px 314px
 	background: url('../img/map.jpg')
+	position: relative
 	&__title
 		display: block
 		color: #f7f7f7
@@ -977,6 +978,51 @@ main
 				margin-bottom: 40px
 	.btn
 		padding: 20px 70px
+	.modal-form
+		display: none
+		position: absolute
+		left: 25%
+		bottom: 40%
+		width: 100%
+		max-width: 490px
+		padding: 60px 30px 25px
+		background: $title
+		&__title
+			display: block
+			width: 377px
+			color: #f7f7f7
+			font-family: $Russo
+			font-size: 18px
+			font-weight: 400
+			letter-spacing: 0.45px
+			margin-bottom: 55px
+		&__close
+			position: absolute
+			top: 20px
+			right: 20px
+			cursor: pointer
+		&__block
+			margin-bottom: 25px
+			input
+				width: 135px
+				color: #f7f7f7 
+				font-family: $UB
+				font-size: 14px
+				font-weight: 700
+				letter-spacing: 0.35px
+				background: transparent
+				border: none
+				border-bottom: 1px solid #f7f7f7
+				padding: 17px
+				outline: none
+				&::placeholder
+					color: #f7f7f7
+			.btn
+				width: 230px
+				padding-left: 50px
+				padding-right: 50px
+				box-sizing: border-box
+				margin-left: 25px
 
 .modal
 	max-width: 920px !important

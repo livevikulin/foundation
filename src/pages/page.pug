@@ -5,7 +5,7 @@ block variables
 block content
 	main
 		.container
-			.nav
+			nav.nav
 				ul
 					li.nav-active
 						a(href="#hero") 
@@ -38,7 +38,7 @@ block content
 						a(href="#contacts") 
 							span КОНТАКТЫ
 			.content
-				.hero
+				section.hero#hero
 					._info
 						h1 Строим фундаменты под малоэтажные дома в Иркутской области
 						._image-mobile
@@ -55,13 +55,13 @@ block content
 								a.btn(href="#") 
 									span ОТПРАВИТЬ ЗАЯВКУ
 							.confirm
-								input(type="checkbox" id="check_confirm")
-								label(for="check_confirm") Я подтверждаю 
+								input(type="checkbox" id="modal-check_confirm")
+								label(for="modal-check_confirm") Я подтверждаю 
 									a(href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown") условия обработки персональных данных
 					._image
 						img(src="img/hero-img.jpg", alt="")
-				.type#type
-					span._title Типы фундамента, которые мы строим
+				section.type#type
+					h2._title Типы фундамента, которые мы строим
 					._boxes
 						.type-box
 							._image
@@ -108,7 +108,7 @@ block content
 							span._caption Сроки строительства:
 							span._subtitle 8-20 дней, в зависимости от объема работ
 							span._price от 12700 руб/м³
-		.calculator-block#calculator
+		section.calculator-block#calculator
 			.container
 				.content
 					.calculator
@@ -990,8 +990,8 @@ block content
 												span ОТПРАВИТЬ ПАРАМЕТРЫ
 		.container
 			.content
-				.selection#selection
-					span._title Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?
+				section.selection#selection
+					h2._title Как мы сделаем стоимость вашего фундамента ниже сохранив надёжность конструкции?
 					span._subtitle Чтобы достичь адекватной стоимости фундамента необходимо провести ряд мероприятий, который смогут осуществить наши специалисты.
 					._block
 						p
@@ -1009,8 +1009,8 @@ block content
 						p
 							span Дополнительно можно провести геологическую разведку
 							span На участке с малоизученным грунтом мы дополнительно можем провести глубокую геологическую разведку, что даст максимальные сведения о свойствах участка под строительство.
-				.form
-					span._title Закажите выезд специалиста на ваш объект для оценки проекта 
+				section.form
+					h2._title Закажите выезд специалиста на ваш объект для оценки проекта 
 					form(action="#")._block
 						input(type="text" placeholder="+7" id="phone")
 						a.btn(href="#") 
@@ -1019,8 +1019,8 @@ block content
 							input(type="checkbox" id="check_confirm")
 							label(for="check_confirm") Я подтверждаю 
 								a(href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown") условия обработки персональных данных
-				.examples#examples
-					span._title Примеры работ, которые мы можем реализовать для вас
+				section.examples#examples
+					h2._title Примеры работ, которые мы можем реализовать для вас
 					._main
 						ul.tabs-nav
 							li
@@ -1234,8 +1234,8 @@ block content
 										li
 											span Описание:
 											span В процессе изучения проекта было принято решение строить фундамент с монолитной плитой. Причиной такого выбора стал неустойчивый грунт и тяжёлая конструкция дома.
-				.about#about
-					span._title О нас
+				section.about#about
+					h2._title О нас
 					span._subtitle Азбука фундамента – строительная компания, занимающаяся созданием различных типов фундамента. Мы помогаем людям строить надёжные и недорогие фундаменты, а так же избежать ошибок в этом процессе. Такие результаты достигаются благодаря нашим ответственным специалистам и наличию собственной специальной техники.
 					._block
 						._box
@@ -1251,8 +1251,8 @@ block content
 						._box.about__box-reverse
 							span.about-box__title 15%
 							span.about-box__subtitle Скидка на <br> предварительный <br> заказ
-				.technics#technics
-					span._title Мы имеем свой парк спецтехники
+				section.technics#technics
+					h2._title Мы имеем свой парк спецтехники
 					._block
 						._box
 							._image
@@ -1270,8 +1270,8 @@ block content
 							._image
 								img(src="img/car4.jpg", alt="")
 							span._subtitle Трактор
-				.specialists#specialists
-					span._title Наши специалисты
+				section.specialists#specialists
+					h2._title Наши специалисты
 					.specialists-slider__mobile
 						.specialists-slide
 							._photo
@@ -1356,8 +1356,8 @@ block content
 								span.specialists__post Инженер
 						._box.specialists__button
 							span Другие сотрудники
-				.reviews#reviews
-					span._title Отзывы наших заказчиков
+				section.reviews#reviews
+					h2._title Отзывы наших заказчиков
 					._slider
 						._slide
 							.review-text
@@ -1380,8 +1380,8 @@ block content
 								._photo
 									img(src="img/photo.jpg", alt="")
 								span._name Константин Константинопольский
-				.contacts#contacts
-					span._title Контакты
+				section.contacts#contacts
+					h2._title Контакты
 					.contacts-block
 						span._title Адрес:
 						span._subtitle ул. Черского 1Б.
@@ -1389,8 +1389,20 @@ block content
 						span._subtitle +7 (3952) 90-48-90
 						span._title Эл. почта:
 						span._subtitle afundament@ya.ru
-					a.btn(href="#")
+					a.btn#footerBtn(href="#")
 						span ЗАКАЗАТЬ КОНСУЛЬТАЦИЮ
+					.modal-form
+						span._title Введите номер телефона и отправьте заявку на расчёт стоимости вашего фундамента
+						span._close
+							<svg id="SVGDoc" width="19" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 19 18"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Line 19</title><path d="M1.5,1.5l16,16" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f7f7f7" stroke-miterlimit="50" stroke-width="2"></path></g><g><title>Line 20</title><path d="M17.5,1.5l-16,16" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f7f7f7" stroke-miterlimit="50" stroke-width="2"></path></g></g></svg>
+						._block
+							input(type="text" placeholder="+7" id="phone_1")
+							a.btn(href="#") 
+								span ОТПРАВИТЬ ЗАЯВКУ
+						.confirm
+							input(type="checkbox" id="modal2-check_confirm")
+							label(for="modal2-check_confirm") Я подтверждаю 
+								a(href="#" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown") условия обработки персональных данных
 	.modal#modal
 		.modal-wrapper
 			span._title Политика обработки персональных данных
