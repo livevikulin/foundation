@@ -107,8 +107,9 @@ $(document).ready(function() {
 	});
 
 	//Маска
-	$("#phone").mask("+7 (999)-999-9999", {autoclear: false});
-	$(".phone_calc").mask("+7 (999)-999-9999", {autoclear: false});
+	let phone = $("#phone, .phone_calc, #phone_1, #phone_2");
+
+	phone.mask("+7 (999)-999-9999", {autoclear: false});
 
 	//Табы в блоке с примерами работ
 	$('.tabs-box').hide();
@@ -184,7 +185,9 @@ $(document).ready(function() {
 	});
 	
 	//Инициализация слайдера с отзывами
-	$('.reviews__slider').slick({
+	let review = $('.reviews__slider');
+
+	review.slick({
 		infinite: true,
 		autoplay: false,
 		speed: 800,
