@@ -13,6 +13,15 @@
 		animation-delay: 1s
 	&__phone
 		width: 40%
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: -40px
+			left: -1px
+			width: 1px
+			height: 204px
+			background: #EEE9E9
 		a
 			color: $title
 			text-decoration: none
