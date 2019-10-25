@@ -1532,7 +1532,7 @@ h1, h2, h3, h4, h5, h6, ul {
 .container {
   width: 100%;
   max-width: 1570px;
-  margin: 0 200px;
+  margin: 0 auto;
   border-left: 1px solid #EEE9E9;
   border-right: 1px solid #EEE9E9; }
 
