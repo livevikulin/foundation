@@ -1637,6 +1637,15 @@ header .container {
   .hero__info {
     width: 50%;
     position: relative; }
+    .hero__info:after {
+      position: absolute;
+      content: '';
+      left: 315px;
+      top: -500px;
+      width: 1px;
+      height: 10740px;
+      background: #EEE9E9;
+      z-index: -1; }
     .hero__info h1 {
       width: 400px;
       color: #2b2c28;
@@ -1722,6 +1731,15 @@ header .container {
     .hero__image img {
       width: 100%;
       object-fit: cover; }
+    .hero__image:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: -1000px;
+      width: 1px;
+      height: 11240px;
+      background: #EEE9E9;
+      z-index: -1; }
     .hero__image:after {
       position: absolute;
       content: '';
@@ -2230,7 +2248,7 @@ header .container {
   display: flex;
   padding-top: 25px; }
   .tabs-info ul {
-    width: 33%;
+    width: 34%;
     list-style: none;
     padding: 0; }
     .tabs-info ul li {
@@ -2410,6 +2428,15 @@ header .container {
       background: #ffcf56; }
     .specialists__button:active:before {
       left: 50px; }
+    .specialists__button:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: -8300px;
+      width: 1px;
+      height: 10487px;
+      background: #EEE9E9;
+      z-index: -1; }
   .specialists-slide__photo {
     margin-bottom: 25px; }
     .specialists-slide__photo img {
@@ -2718,7 +2745,7 @@ header .container {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.35px;
-    margin-right: 235px;
+    margin-right: 217px;
     padding: 4px 20px 4px 0;
     text-decoration: none;
     position: relative; }
@@ -2788,7 +2815,13 @@ header .container {
   .specialists__button {
     width: 30%;
     height: 369px;
-    margin-left: 30px; } }
+    margin-left: 30px; }
+  .hero__info:after {
+    height: 10570px; }
+  .hero__image:before {
+    height: 11070px; }
+  .specialists__button:after {
+    height: 10445px; } }
   @media (max-width: 1140px) {
   .container {
     width: 95%;
@@ -2823,6 +2856,19 @@ header .container {
     padding: 20px 0 0; }
   .hero {
     padding-bottom: 100px; } }
+  @media (max-width: 999px) {
+  .hero__info:after {
+    display: none; }
+  .hero__image:before {
+    display: none; }
+  .content {
+    border: none; }
+  .container {
+    border: none; }
+  .specialists__button:after {
+    display: none; }
+  .header__phone:before {
+    display: none; } }
   @media (max-width: 768px) {
   .container {
     width: 100%;

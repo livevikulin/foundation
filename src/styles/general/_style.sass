@@ -100,6 +100,15 @@ header
 	&__info
 		width: 50%
 		position: relative
+		&:after
+			position: absolute
+			content: ''
+			left: 315px
+			top: -500px
+			width: 1px
+			height: 10740px
+			background: #EEE9E9
+			z-index: -1
 		h1
 			width: 400px
 			color: $title
@@ -186,6 +195,15 @@ header
 		img
 			width: 100%
 			object-fit: cover
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: -1000px
+			width: 1px
+			height: 11240px
+			background: #EEE9E9
+			z-index: -1
 		&:after
 			position: absolute
 			content: ''
@@ -692,7 +710,7 @@ header
 		display: flex
 		padding-top: 25px
 		ul
-			width: 33%
+			width: 34%
 			list-style: none
 			padding: 0
 			li
@@ -875,6 +893,15 @@ header
 		&:active
 			&:before
 				left: 50px
+		&:after
+			position: absolute
+			content: ''
+			left: 0
+			top: -8300px
+			width: 1px
+			height: 10487px
+			background: #EEE9E9
+			z-index: -1
 	&-slide
 		&__photo
 			margin-bottom: 25px
@@ -1145,6 +1172,15 @@ header
 			width: 30%
 			height: 369px
 			margin-left: 30px
+	.hero__info
+		&:after
+			height: 10570px
+	.hero__image
+		&:before
+			height: 11070px
+	.specialists__button
+		&:after
+			height: 10445px
 
 @media (max-width: 1140px)
 	.nav
@@ -1185,6 +1221,21 @@ header
 		padding: 20px 0 0
 	.hero
 		padding-bottom: 100px
+		
+@media (max-width: 999px)
+	.hero__info
+		&:after
+			display: none
+	.hero__image
+		&:before
+			display: none
+	.content
+		border: none
+	.container
+		border: none
+	.specialists__button
+		&:after
+			display: none
 
 @media (max-width: 768px)
 	.btn
